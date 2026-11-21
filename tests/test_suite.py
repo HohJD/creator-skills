@@ -36,7 +36,9 @@ class PackageTests(unittest.TestCase):
    target=Path(td)
    for agent in ('claude','codex'):
     paths=self.installer.install(agent,'project',target)
-    self.assertEqual({p.name for p in paths},{'scriptcraft','carouselcraft'})
+    expected = {p.parent.name for p in (ROOT/'content-creation').rglob('SKILL.md')}
+    self.assertTrue({'scriptcraft','carouselcraft','social-captions','subtitle-editor'} <= expected)
+    self.assertEqual({p.name for p in paths},expected)
     self.assertTrue(all((p/'SKILL.md').is_file() for p in paths))
    with self.assertRaises(FileExistsError):self.installer.install('claude','project',target)
 

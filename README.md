@@ -2,12 +2,27 @@
 
 [![CI](https://github.com/HohJD/creator-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/HohJD/creator-skills/actions/workflows/ci.yml)
 
-Choose a skill for the piece you're making.
+CreatorSkills is a library of 17 skills for creators who write, film, edit and publish with Codex or Claude Code. Bring the material you actually have: a rough take, two photos, a transcript, a sponsor brief or a small set of analytics.
 
-| Skill | What you get | Start here |
+### Which caption do you need?
+
+| Where the words go | Skill | Try it |
 | --- | --- | --- |
-| **CarouselCraft** | A swipe post with exact card copy and a visual prompt or crop direction for every slide. | [Eight formats and their prompts](content-creation/carouselcraft/references/format-prompts.md) · [Five-card Grok Bot example](examples/grok-bot-carousel/) |
-| **ScriptCraft** | A recordable video script built from your rough take, footage or sponsor brief. | [Python voiceover and shot list](examples/python-hello/README.md) |
+| Under the post | [Social captions](content-creation/social-captions/SKILL.md) | [Seven copyable caption prompts](content-creation/social-captions/references/caption-prompts.md) |
+| In sync with the video | [Subtitle editor](content-creation/subtitle-editor/SKILL.md) | [Sample SRT, WebVTT and cue data](examples/creator-captions/) |
+| In the image's accessible description | [Image descriptions](content-creation/image-descriptions/SKILL.md) | Describe the information the reader needs from a still, chart or swipe post. |
+
+### Pick the job
+
+| Stage | Skills |
+| --- | --- |
+| Research and plan | [Content planner](content-creation/content-planner/SKILL.md) · [Interview guide](content-creation/interview-guide/SKILL.md) · [Prepublication fact check](content-creation/creator-fact-check/SKILL.md) |
+| Write and design | [ScriptCraft](content-creation/scriptcraft/SKILL.md) · [CarouselCraft](content-creation/carouselcraft/SKILL.md) · [Video title and thumbnail](content-creation/title-thumbnail/SKILL.md) |
+| Film and edit | [Shot list and B-roll](content-creation/shoot-plan/SKILL.md) · [Clip selection](content-creation/clip-selects/SKILL.md) · [Subtitle editor](content-creation/subtitle-editor/SKILL.md) |
+| Publish and adapt | [Social captions](content-creation/social-captions/SKILL.md) · [Image descriptions](content-creation/image-descriptions/SKILL.md) · [Creator newsletter](content-creation/newsletter-editor/SKILL.md) · [Podcast show notes](content-creation/podcast-notes/SKILL.md) · [Content repurposing](content-creation/content-repurpose/SKILL.md) · [Localization](content-creation/content-localization/SKILL.md) |
+| After publication | [Community replies](content-creation/community-replies/SKILL.md) · [Creator analytics](content-creation/creator-analytics/SKILL.md) |
+
+[Browse prompts and worked examples](docs/CREATOR-PROMPTS.md) · [Eight carousel formats](content-creation/carouselcraft/references/format-prompts.md) · [Five-card Grok Bot example](examples/grok-bot-carousel/) · [See what was tested](docs/CREATOR-TRIALS.md)
 
 ## Install
 
@@ -23,12 +38,12 @@ cd creator-skills
 | Claude Code | `python3 tools/install.py --agent claude --scope user` | `python3 tools/install.py --agent claude --scope project --target /path/to/project` |
 | Codex | `python3 tools/install.py --agent codex --scope user` | `python3 tools/install.py --agent codex --scope project --target /path/to/project` |
 
-By default, the installer copies both skills into `.claude/skills/` or `.agents/skills/` under your home or project directory. If you're updating an existing installation, add `--force` to back up the old copy before replacing it.
+By default, the installer copies all skills into `.claude/skills/` or `.agents/skills/` under your home or project directory. If you're updating an existing installation, add `--force` to back up the old copy before replacing it.
 
-To add just CarouselCraft to an existing Codex setup, run:
+To add just the social caption skill to an existing Codex setup, run:
 
 ```bash
-python3 tools/install.py --agent codex --scope user --skill carouselcraft
+python3 tools/install.py --agent codex --scope user --skill social-captions
 ```
 
 ## Make a carousel

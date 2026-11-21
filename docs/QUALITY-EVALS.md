@@ -2,6 +2,8 @@
 
 We evaluate **routing** and **execution quality** separately. Running the supplied Python test suite does not evaluate either model's actual skill-invocation decisions; it validates package structure and deterministic requirements.
 
+The expanded [creator trials](CREATOR-TRIALS.md) and [routing probes](CREATOR-PROBES.md) cover the additional skills.
+
 ## Routing probes, manually in fresh Claude Code / Codex sessions
 
 | Test | Target | Expected |

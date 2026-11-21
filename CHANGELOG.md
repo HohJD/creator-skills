@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added 15 creator workflows spanning social copy, subtitles, accessibility, planning, production, localization, distribution and measurement. Added a standard-library SRT/WebVTT exporter, worked examples and behavioural trial notes.
+
 - Added CarouselCraft with eight carousel formats, reusable prompts and a five-card worked example. Install one skill by name with `--skill`.
 
 ## 0.2.0 — 2026-11-21

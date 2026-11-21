@@ -35,3 +35,5 @@ Source citations and observed output are **different** claims. A docs page descr
 ## Maintainer note
 
 Recheck official Agent Skills / Claude Code / Codex docs before each release. Limit SKILL bodies and avoid heavy dependency graphs that create prompt bloat. See [OpenAI's 2026 skill guidance](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) on keeping descriptions and injected context focused.
+
+The [creator prompt library](CREATOR-PROMPTS.md) links to the editorial sources in each installed skill. See [the trial notes](CREATOR-TRIALS.md) for what was checked against fictional briefs.
