@@ -6,6 +6,9 @@ We evaluate **routing** and **execution quality** separately. Running the suppli
 
 | Test | Target | Expected |
 |---|---|---|
+| "Make a five-card before-and-after post from these two briefs, with a visual prompt for each card." | carouselcraft | exact five-card sequence, grounded comparison and reproducible directions |
+| "Give me four types of carousels with a writing prompt for each. No finished post yet." | carouselcraft | four distinct types with four usable prompts |
+| "Fix the previous/next arrows in my React image carousel." | none | code task rather than social content |
 | "Make a 40-second Reel tutorial from this recorded AI demo" | scriptcraft | trigger |
 | "Check whether the discount I mention in this sponsored tutorial is still active" | scriptcraft (research mode) | trigger |
 | "Review this tutorial for fabricated UI labels" | scriptcraft (review mode) | trigger |

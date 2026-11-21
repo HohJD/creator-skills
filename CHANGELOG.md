@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Added CarouselCraft with eight carousel formats, reusable prompts and a five-card worked example. Install one skill by name with `--skill`.
+
 ## 0.2.0 — 2026-11-21
 
 - Renamed public repository to CreatorSkills and consolidated four overlapping tasks into one ScriptCraft skill.

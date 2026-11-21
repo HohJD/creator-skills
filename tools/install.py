@@ -11,12 +11,18 @@ ROOT=Path(__file__).resolve().parents[1]
 LOCATIONS={"claude": {"project":".claude/skills", "user":".claude/skills"},
            "codex": {"project":".agents/skills", "user":".agents/skills"}}
 
-def install(agent:str,scope:str,target:Path|None=None,force:bool=False)->list[Path]:
+def install(agent:str,scope:str,target:Path|None=None,force:bool=False, *, skill: str | None = None)->list[Path]:
     if scope=="user":
         destination=Path.home()/LOCATIONS[agent]["user"]
     else:
         destination=(target or Path.cwd()).resolve()/LOCATIONS[agent]["project"]
     skills=sorted(p.parent for p in (ROOT/"content-creation").rglob("SKILL.md"))
+    if skill is not None:
+        selected = [item for item in skills if item.name == skill]
+        if not selected:
+            names = ", ".join(item.name for item in skills)
+            raise ValueError(f"Unknown skill {skill!r}. Available skills: {names}")
+        skills = selected
     collisions=[destination/p.name for p in skills if (destination/p.name).exists()]
     if collisions and not force:
         raise FileExistsError("Existing skills will not be overwritten: "+", ".join(map(str,collisions))+"; pass --force to back up and replace")
@@ -42,10 +48,11 @@ if __name__=="__main__":
     parser.add_argument('--agent',choices=LOCATIONS,required=True)
     parser.add_argument('--scope',choices=['project','user'],default='project')
     parser.add_argument('--target',type=Path,help='project root; ignored for --scope user')
+    parser.add_argument('--skill', help='install one skill by name (default: all)')
     parser.add_argument('--force',action='store_true',help='back up existing folders before replacing them')
     args=parser.parse_args()
     try:
-        for path in install(args.agent,args.scope,args.target,args.force): print('Installed:',path)
-    except (FileExistsError,OSError) as exc:
+        for path in install(args.agent,args.scope,args.target,args.force,skill=args.skill): print('Installed:',path)
+    except (ValueError,OSError) as exc:
         print('Install failed:',exc,file=sys.stderr)
         sys.exit(2)

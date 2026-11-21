@@ -2,15 +2,14 @@
 
 [![CI](https://github.com/HohJD/creator-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/HohJD/creator-skills/actions/workflows/ci.yml)
 
-**ScriptCraft** helps you turn a screen recording, rough take or sponsor brief into a video tutorial you can record. Give it the words you already have and tell it what's on screen. You can ask for a light edit, a full script with shots, or a second pair of eyes on a claim before you publish.
+Choose a skill for the piece you're making.
 
-Here's a line from the sample Python tutorial. The viewer has just run a file that prints a greeting.
+| Skill | What you get | Start here |
+| --- | --- | --- |
+| **CarouselCraft** | A swipe post with exact card copy and a visual prompt or crop direction for every slide. | [Eight formats and their prompts](content-creation/carouselcraft/references/format-prompts.md) · [Five-card Grok Bot example](examples/grok-bot-carousel/) |
+| **ScriptCraft** | A recordable video script built from your rough take, footage or sponsor brief. | [Python voiceover and shot list](examples/python-hello/README.md) |
 
-> See where it says “Hello, tutorial”? Let's put your name there. In the line that starts with “return”, change “tutorial” to “Sam”. Leave the quotes.
-
-[Run the demo and see the rough take, finished voiceover and shots.](examples/python-hello/README.md)
-
-## Install ScriptCraft
+## Install
 
 You'll need Python 3.10 or newer. Clone the repository, then pick the command for the agent you use.
 
@@ -24,9 +23,23 @@ cd creator-skills
 | Claude Code | `python3 tools/install.py --agent claude --scope user` | `python3 tools/install.py --agent claude --scope project --target /path/to/project` |
 | Codex | `python3 tools/install.py --agent codex --scope user` | `python3 tools/install.py --agent codex --scope project --target /path/to/project` |
 
-The installer copies [the skill folder](content-creation/scriptcraft/) into `.claude/skills/` or `.agents/skills/` under your home or project directory. If you're updating an existing installation, add `--force` to back up the old copy before replacing it.
+By default, the installer copies both skills into `.claude/skills/` or `.agents/skills/` under your home or project directory. If you're updating an existing installation, add `--force` to back up the old copy before replacing it.
 
-## Try it on your own footage
+To add just CarouselCraft to an existing Codex setup, run:
+
+```bash
+python3 tools/install.py --agent codex --scope user --skill carouselcraft
+```
+
+## Make a carousel
+
+Use `$carouselcraft` in Codex or `/carouselcraft` in Claude Code. For example:
+
+> Turn these two versions of a sponsor brief into a five-slide before-and-after carousel for video editors. Show the date that moved, the two edits it affects and the exact prompt I can reuse. Give me the words and visual direction for each card.
+
+The [prompt library](content-creation/carouselcraft/references/format-prompts.md) also covers tutorials, checklists, comparisons, troubleshooting, photo stories, teardowns and prompt packs.
+
+## Write a video script
 
 Attach the clip or paste your rough take and a few notes about what happens on screen. Use `$scriptcraft` in Codex or `/scriptcraft` in Claude Code. For example:
 

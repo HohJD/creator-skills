@@ -36,8 +36,26 @@ class PackageTests(unittest.TestCase):
    target=Path(td)
    for agent in ('claude','codex'):
     paths=self.installer.install(agent,'project',target)
-    self.assertEqual(len(paths),1)
+    self.assertEqual({p.name for p in paths},{'scriptcraft','carouselcraft'})
     self.assertTrue(all((p/'SKILL.md').is_file() for p in paths))
    with self.assertRaises(FileExistsError):self.installer.install('claude','project',target)
+
+ def test_add_carousel_to_existing_installation(self):
+  with tempfile.TemporaryDirectory() as td:
+   project = Path(td)
+   existing = project / '.agents/skills/scriptcraft'
+   existing.mkdir(parents=True)
+   local_edit = existing / 'SKILL.md'
+   local_edit.write_text('local revision')
+   installed, = self.installer.install('codex','project',project,skill='carouselcraft')
+   self.assertTrue((installed / 'references/format-prompts.md').is_file())
+   self.assertEqual(local_edit.read_text(),'local revision')
+
+ def test_unknown_skill_leaves_project_untouched(self):
+  with tempfile.TemporaryDirectory() as td:
+   project = Path(td)
+   with self.assertRaisesRegex(ValueError,'Unknown skill'):
+    self.installer.install('codex','project',project,skill='typo')
+   self.assertEqual(list(project.iterdir()),[])
 
 if __name__=='__main__':unittest.main()
