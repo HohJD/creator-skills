@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Structured tutorial QA package",
+  "type": "object",
+  "required": [
+    "brief",
+    "claims",
+    "scenes"
+  ],
+  "properties": {
+    "brief": {
+      "$ref": "brief.schema.json"
+    },
+    "claims": {
+      "$ref": "claims.schema.json"
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "narration",
+          "screen_action",
+          "claim_ids"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^S[0-9]+$"
+          },
+          "narration": {
+            "type": "string",
+            "minLength": 1
+          },
+          "screen_action": {
+            "type": "string",
+            "minLength": 1
+          },
+          "claim_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "seconds": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "proof": {
+            "type": "string"
+          },
+          "overlay": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

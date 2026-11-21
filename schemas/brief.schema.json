@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tutorial brief",
+  "type": "object",
+  "required": [
+    "topic",
+    "audience",
+    "observable_outcome",
+    "mode"
+  ],
+  "properties": {
+    "topic": {
+      "type": "string",
+      "minLength": 1
+    },
+    "audience": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observable_outcome": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mode": {
+      "enum": [
+        "short",
+        "long",
+        "sponsored"
+      ]
+    },
+    "language": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "string"
+    },
+    "seconds": {
+      "type": "integer",
+      "minimum": 5
+    },
+    "source_material": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "claimed_results_observed": {
+      "type": "boolean"
+    },
+    "mandatory_cta": {
+      "type": "string"
+    },
+    "mandatory_disclosure": {
+      "type": "string"
+    },
+    "requires_verification": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

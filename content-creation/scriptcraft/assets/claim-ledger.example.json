@@ -1,0 +1,17 @@
+{
+  "project": "Example (no external product facts asserted)",
+  "checked_at": "2026-11-21",
+  "claims": [
+    {
+      "id": "C001",
+      "text": "The sample Python script prints a greeting",
+      "risk": "critical",
+      "status": "observed",
+      "source": null,
+      "checked_at": "2026-11-21",
+      "version_or_scope": "example.py with Python 3.10+",
+      "demo": {"state": "observed", "evidence": "python3 examples/python-hello/demo.py => Hello, tutorial!"},
+      "scenes": ["S03"]
+    }
+  ]
+}

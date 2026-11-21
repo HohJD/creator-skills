@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Claim ledger",
+  "type": "object",
+  "required": [
+    "claims"
+  ],
+  "properties": {
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "text",
+          "risk",
+          "status",
+          "demo"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^C[0-9]+$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "risk": {
+            "enum": [
+              "critical",
+              "minor"
+            ]
+          },
+          "status": {
+            "enum": [
+              "documented",
+              "observed",
+              "unverified",
+              "inference"
+            ]
+          },
+          "source": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "checked_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "version_or_scope": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "demo": {
+            "type": "object",
+            "required": [
+              "state"
+            ],
+            "properties": {
+              "state": {
+                "enum": [
+                  "observed",
+                  "planned",
+                  "not-applicable"
+                ]
+              },
+              "evidence": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "scenes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

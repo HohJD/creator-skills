@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.DS_Store
+.tutorial-local/
+private-scripts/
+.env
+.env.*
+!*.example
+*.zip
+coverage.xml

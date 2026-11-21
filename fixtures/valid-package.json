@@ -1,0 +1,40 @@
+{
+  "_expected_valid": true,
+  "brief": {
+    "topic": "One-file Python greeting",
+    "audience": "first Python script",
+    "observable_outcome": "run demo and see greeting",
+    "mode": "short"
+  },
+  "claims": {
+    "claims": [
+      {
+        "id": "C001",
+        "text": "running demo.py prints a greeting",
+        "risk": "critical",
+        "status": "observed",
+        "source": null,
+        "checked_at": "2026-11-21",
+        "version_or_scope": "Python 3.10+",
+        "demo": {
+          "state": "observed",
+          "evidence": "stdout: Hello, tutorial!"
+        },
+        "scenes": [
+          "S01"
+        ]
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "id": "S01",
+      "narration": "Run this file and see the greeting.",
+      "screen_action": "Show executing demo.py and actual output",
+      "claim_ids": [
+        "C001"
+      ],
+      "seconds": 8
+    }
+  ]
+}
