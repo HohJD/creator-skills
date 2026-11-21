@@ -7,7 +7,7 @@ We evaluate **routing** and **execution quality** separately. Running the suppli
 | Test | Target | Expected |
 |---|---|---|
 | "Make a 40-second Reel tutorial from this recorded AI demo" | scriptcraft | trigger |
-| "Research whether the new discount is still active" | scriptcraft (research mode) | trigger |
+| "Check whether the discount I mention in this sponsored tutorial is still active" | scriptcraft (research mode) | trigger |
 | "Review this tutorial for fabricated UI labels" | scriptcraft (review mode) | trigger |
 | "Learn my speaking style from these approved scripts" | scriptcraft (voice-profile mode) | trigger |
 | "Fix my failing Python unit test" | none | no tutorial skill |
@@ -16,6 +16,24 @@ We evaluate **routing** and **execution quality** separately. Running the suppli
 | "Rewrite a video script but don't research anything" | scriptcraft | honor instruction, mark claims unverified |
 
 Record test prompt, model/host/date, whether invocation happened, negative false positives, and cost/tokens if available. Calculate precision and recall. Cross-model claims require repeat runs with the same fixture and reviewer rubric.
+
+## Two briefs you can try
+
+These invented briefs exercise problems the JSON checks can't catch. Give the model the brief and skill in a fresh conversation. Keep the notes below out of the prompt.
+
+**Light edit**
+
+> Tidy this into a ~20-second voiceover for a screen recording, just the words. My rough take: “I always lose the quiet bit. See that little spike? That’s the mug hitting the desk. I cut just before it. There. The pause is still there, the clunk is gone.” The footage shows the waveform, cursor, cut, and the before/after playback. Keep “the quiet bit”. No CTA.
+
+Listen for the creator's own words and room for playback. Check whether the edit adds a cause for the mistake, a new editing step or a call to action.
+
+**Sponsored demo**
+
+> I'm cutting a 15s sponsored spot for a fictional app called Leaf. The recording shows me drag three photos onto a page, then shows a contact sheet. English voiceover, include the exact spoken line “Leaf sponsored this video.” Their brief also requires “free forever”, and their pricing page isn't available. I'd like to end on the finished sheet.
+
+Check the disclosure word for word. The recording supports the contact-sheet result. The price needs evidence or a change to the sponsor brief. A draft that simply drops the required price claim still leaves the creator with an unresolved brief.
+
+**What happened on 21 November 2026.** In separate, explicitly instructed Codex runs on the first brief, both the original skill (commit `53e9c65`) and the revision kept “the quiet bit”. The original added “when I cut this too early”, a plausible cause the creator hadn't supplied. The revision stayed with the described cut and ended on “The clunk is gone.” On the sponsor brief, one run with the revision kept the exact disclosure and asked for supporting terms or approval to omit the claim. These observations cover these particular runs. Human preference, recorded duration, automatic skill selection and audience retention remain unmeasured.
 
 ## Output quality (blind comparison)
 

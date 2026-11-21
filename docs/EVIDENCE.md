@@ -7,7 +7,8 @@ This repository operationalizes **learning principles** and **editable editorial
 | [Agent Skills specification](https://agentskills.io/specification) | `SKILL.md`, concise `name`/`description`, progressive disclosure | Open format specification |
 | [Claude Code skills](https://code.claude.com/docs/en/skills) | project `.claude/skills/`, reference files, invocation | Vendor docs; can change |
 | [OpenAI skill guidance](https://developers.openai.com/plugins/build/skills) | focused skills, references, scripts only when needed | Vendor docs; can change |
-| [Codex skills locations](https://developers.openai.com/api/reference/cli) | project `.agents/skills/`, user `~/.agents/skills/` | Vendor docs; verify on update |
+| [Codex skills locations](https://developers.openai.com/codex/skills/) | project `.agents/skills/`, user `~/.agents/skills/` | Vendor docs; verify on update |
+| [BBC Academy, Making news for radio or a podcast (PDF)](https://downloads.bbc.co.uk/academy/academyfiles/Making%20news%20for%20radio%20or%20a%20podcast.pdf) | Use words a presenter would say out loud. Rehearse the line to catch phrasing that is hard to follow on first hearing. | Broadcast writing practice |
 | [Diátaxis tutorial principles](https://diataxis.fr/tutorials/) | learning journeys with results early and in steps | Normative framework |
 | [Google Codelabs](https://developers.google.com/codelabs) | learn by guided hands-on builds | Public design practice |
 | [Cognitive load review](https://pmc.ncbi.nlm.nih.gov/articles/PMC7940870/) | signalling, reducing irrelevant load, segmenting instruction | Review article, education contexts |
@@ -23,9 +24,9 @@ This repository operationalizes **learning principles** and **editable editorial
 - **A / authoritative:** product spec, actual recorded successful demo, or robust learning-science synthesis (with scoped claims).
 - **B / empirical:** strong contextual study with transfer limitations.
 - **C / design framework:** actionable practice with no universal causal guarantee.
-- **D / editorial experiment:** project hypothesis, e.g. three candidate hooks, demo-first sequence, exact script cadence.
+- **D / editorial experiment:** project hypothesis, e.g. choice of opening shot, demo-first sequence, script cadence.
 
-Do not call all project instructions "evidence based" without distinguishing evidence type. In particular, fixed beats like 0–3s hook, 35s demonstration, 3–7s CTA are **editorial defaults**, to be personalized and measured, not scientifically proven timing.
+Do not call all project instructions "evidence based" without distinguishing evidence type. The time a shot needs depends on what the viewer has to read, hear or do. Check pacing against a recording.
 
 ## Verification stance
 

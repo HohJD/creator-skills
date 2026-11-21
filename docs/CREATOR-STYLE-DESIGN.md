@@ -8,7 +8,7 @@ This is a **public, generalized** description of why the script skill defaults s
 - Let the narrator sound as though they tried something personally, but only when that experience is documented.
 - Follow short steps viewers can actually see: choose/open/upload/generate/check.
 - Make the result concrete. If it is AI-generated cinematic imagery, say so.
-- Close with one specific resource-led CTA such as the exact prompt/template/workflow, not three generic engagement asks.
+- Let the result close the clip. Use a specific resource or next step when the brief calls for one and the resource exists.
 - Preserve natural spoken pacing and everyday vocabulary; use enthusiasm when supported by the result.
 - Reject self-centred or cringeworthy framing if it detracts from the viewer's curiosity.
 - In sponsored work, begin with a genuine demonstration, then identify how the product enabled it, keeping disclosure and mandatory copy accurate.

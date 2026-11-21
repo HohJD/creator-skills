@@ -1,37 +1,15 @@
-# Honest hook engineering
+# Finding the opening line
 
-The first beat must answer: Why watch *this* demo *now*? The strongest hook is anchored in a visual or knowledge gap that the script actually closes.
+Watch the first shot you can actually use. What would someone beside the creator want to know about it? If the creator already answers that question in their first line, try the line over the shot before rewriting it.
 
-## Six distinct families
+Suppose a caption breaks a person's name across two lines. The creator has footage of the bad caption, the edit and the corrected caption. Three openings are possible, depending on the cut:
 
-1. **Unexpected result:** "I tried turning [real input] into [observed surprising output]. Watch this." Visual must support it.
-2. **Audience friction:** "Still manually doing [repeated chore]? Here's the exact step I changed." Show the before state.
-3. **Specific challenge:** "Can [tool] do [bounded task] using only [given constraint]? I tested it." Don't call it a success before proof.
-4. **Pattern interrupt:** open on the output/error and ask "Wait, why did that happen?" then resolve.
-5. **Side quest/discovery:** "I found an open-source project that [verified capability]. So I cloned it and tried it." Credit the creator.
-6. **Fast outcome preview:** "Here's the finished [artifact]. I'll show you what I typed and what actually worked." Good for developer tools.
+| Opening shot | Spoken line | What the rest of the clip owes the viewer |
+| --- | --- | --- |
+| The awkward line break | “Poor Maya. Half her name's on the next line.” | Show the break long enough to read it, then fix it. Use the joke only if it fits the speaker. |
+| The corrected caption | “I wanted her whole name on one line.” | Show the original and the edit. Use first person only if the creator gave this intention. |
+| The cursor at the break | “Move the break one word to the left.” | Show which word moves and how the name reads afterward. |
 
-Use at least two *different* families in the candidate set. Hook is not a formula to fill mechanically.
+These are invented lines for that footage. For a new clip, start with its own sound, detail or question. Offer alternate openings when the creator asks or when the choice changes what they'll need to shoot.
 
-## Score each proposed hook (0–2 each)
-
-- **Specificity:** names precise observable result
-- **Visuality:** can it be demonstrated in first seconds?
-- **Truth:** no unproven release/scale/savings/speed/performance claim
-- **Relevance:** viewer can recognise use case or problem
-- **Payoff contract:** the tutorial actually satisfies it
-
-Reject a hook below 8/10 or with any zero on truth.
-
-## Anti-patterns
-
-- "[Product] changed everything" without tangible evidence
-- "Everyone is talking about" / "No one knows" without evidence
-- "Free forever / unlimited" without terms, date and scope
-- "I built this in 30 seconds" if build time includes unseen prior work
-- Fake personal achievements, fake screenshots, AI-generated proof passed off as genuine
-- Hooks that depend on unlicensed game footage or imply AI content is official gameplay
-
-## Hook rehearsal test
-
-Cover the title, mute the audio, watch first 3 seconds. Can viewer identify *some* relevant result/problem? Then listen without video. Does narration promise an outcome the full tutorial delivers? Revise both, rather than only adding louder adjectives.
+Check that someone seeing the clip cold can tell what the line refers to and that the promised result arrives. An error the viewer can recognise is enough reason to keep watching. A claim about speed, savings, popularity or something the creator personally tested needs its own evidence.

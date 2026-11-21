@@ -1,11 +1,19 @@
-# A deliberately small testable tutorial
+# Change what Python prints
 
-This is an invented sample, **not** a user-authored script or a claim about any third-party product. Run `python3 examples/python-hello/demo.py` to verify the output.
+A short screen recording for someone opening a Python file for the first time. The file in this folder is the whole demo.
 
-**Hook:** "Here's a one-file Python program that prints a greeting. I'll show you the whole thing, then change one line to prove what it does."
+**Rough take**
 
-**Narration:** "Open `demo.py`. This function returns a greeting. And the last two lines only run when we execute the file directly. Let's run it. We get `Hello, tutorial!`. Now change the greeting and run it again. That's the whole pattern: define a result, call it, verify the output."
+“Today we'll explore how modifying the return value of a function affects the output of a Python program.”
 
-**Shots:** 1. Open actual `demo.py` code. 2. Highlight `greet()`. 3. Show terminal `python3 examples/python-hello/demo.py`; display actual stdout. 4. Modify greeting, rerun, show changed result (record after testing).
+**Ready to record**
 
-**Claim ledger:** C001 observed output from test, as recorded only after running in environment.
+“See where it says ‘Hello, tutorial’? Let's put your name there. In the line that starts with ‘return’, change ‘tutorial’ to ‘Sam’. Leave the quotes. Save the file and run it again. There's your new greeting. ‘Hello, Sam!’”
+
+**What to film**
+
+1. From the repository root, run `python3 examples/python-hello/demo.py`. Hold on `Hello, tutorial!` long enough to read it.
+2. Show the line `return 'Hello, tutorial!'`. In a working copy, replace `tutorial` with `Sam` and save.
+3. Run that copy with Python. Frame the new output, `Hello, Sam!`, alongside the edited line.
+
+The rough take names a concept. The recording gives a beginner a word to change and a result to check. The quotes stay on screen so the narrator can spend the last beat on the greeting.
