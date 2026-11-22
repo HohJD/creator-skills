@@ -1,6 +1,6 @@
 ---
 name: visual-prompt-pack
-description: Create reusable art-direction prompts and coherent image variants for a creator series, including composition, references, editable copy space and asset-use instructions.
+description: Create reusable art-direction prompts and coherent image variants for a creator series, fixing palette, medium, subject and crop while varying one element, with space kept for editable text. Use when someone asks for image prompts, a prompt pack, consistent AI image variations or art direction for a series. Not for a full carousel with on-card copy (carouselcraft) or storyboard panels for a video (storyboard-sequence).
 license: Apache-2.0
 ---
 

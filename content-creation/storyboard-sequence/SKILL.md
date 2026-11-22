@@ -1,6 +1,6 @@
 ---
 name: storyboard-sequence
-description: Design a visual storyboard in viewing order with identifiable panels, action continuity, screen direction and audio cues for a creator video or short animation.
+description: Design a storyboard in viewing order with numbered panels, start and end frames, action continuity, screen direction, audio cues and optional still prompts for a creator video or short animation. Use when someone asks for a storyboard, panel breakdown or frame-by-frame plan of a scene. Not for a shoot-day list grouped by setup (shoot-plan) or a voiceover script (scriptcraft).
 license: Apache-2.0
 ---
 

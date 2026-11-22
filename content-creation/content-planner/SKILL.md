@@ -1,6 +1,6 @@
 ---
 name: content-planner
-description: Turn audience questions, a content backlog, deadlines, available assets and production capacity into a feasible creator calendar or ranked editorial plan.
+description: Turn audience questions, a backlog, deadlines, available assets and real production hours into a feasible content calendar or ranked editorial plan, with dependencies, time estimates and what to drop if a shoot slips. Use when someone asks for a content calendar, posting plan, editorial schedule or what to make this week or month. Not for scheduling posts inside an account, or a single livestream run of show (live-rundown).
 license: Apache-2.0
 ---
 

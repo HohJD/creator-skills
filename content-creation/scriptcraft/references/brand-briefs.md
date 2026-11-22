@@ -1,35 +1,36 @@
-# Sponsor / campaign brief handling
+# Sponsor and campaign briefs
 
-A brief is a set of **constraints**, *not* proof that every marketing claim is true. Sponsored scripts must serve the audience and the contractual rules without burying the real demonstration.
+A brief is a set of constraints, not proof that every marketing claim is true. A sponsored script has to serve the audience and the contract without burying the real demonstration.
 
-## Start with a compliance matrix
+## Pull out the constraints first
 
-| Field | Extract verbatim | Verification |
+| Field | Take verbatim | What to do with it |
 |---|---|---|
-| Objective | desired viewer action, target audience | strategic, not factual |
-| Mandatory product name/USPs | required mentions | independently check where feasible |
-| Exact CTA | exact speech/caption/hashtag | preserve verbatim |
-| Sponsor/disclosure | contract or platform-required text | ensure obvious to audience |
-| Claims: price/free/unlimited/speed | exact wording, scope and date | version/date sensitive — verify |
-| Limitations | credits, paywall, permissions, regions, eligibility | verify |
-| Banned references | competitor/game/trademark/fabricated screenshot | obey |
-| Deliverables | seconds, format, language, review deadline | obey |
-| Approval | who must sign off, what can change | do not imply permission to publish |
+| Objective | the viewer action and target audience | shape the payoff; nothing to verify |
+| Product name and must-mention features | the required mentions | check against the footage or docs where you can |
+| Exact CTA | the spoken line, caption text, keyword or hashtag | keep word for word |
+| Disclosure | the contract or platform wording | make it obvious and early enough to count |
+| Price, free, unlimited or speed claims | the wording, scope and date | verify against dated first-party terms |
+| Limitations | credits, paywalls, permissions, regions, eligibility | verify and keep beside the claim they limit |
+| Banned references | competitors, trademarks, footage types | obey |
+| Deliverables | length, format, language, review deadline | obey |
+| Approval | who signs off and what may change | never imply permission to publish |
 
 ## Workflow
 
-1. Extract hard constraints and exact quotation for mandatory CTA.
-2. Separate **script-required** from **caption-required** text (do not mix).
-3. Compare each must-say claim to what can be verified; flag unsupported statements to the human before recording.
-4. Plan an honest filmed payoff and introduce the brand as a necessary explanation of how the result was made.
-5. Offer an alternate truth-safe phrasing where contractual wording is inaccurate; never silently change exact mandatory copy and pretend compliance.
-6. Audit claim ledger, timing, disclosures, and visual shots. Output the requested table if requested.
+1. Copy the hard constraints and the exact mandatory lines.
+2. Separate what must be **spoken** from what must appear in the **caption** or on screen. Don't move one into the other.
+3. Compare each must-say claim with what the footage, docs or terms support. Flag any gap to the creator before calling the script ready to record.
+4. Build around an honest filmed payoff. Bring in the product as the explanation of how the result happened.
+5. Where required wording is inaccurate, keep it in the draft as supplied, mark it, and offer an accurate alternative for the sponsor to approve. Never quietly change mandatory copy and present it as compliant.
+6. Before handing over, check the disclosure, every mandatory line, the timing and the shots that prove each claim.
 
 ## Common failures
 
-- Switching products midway through campaign development (e.g. one agent clips footage, another generates video templates)
-- Unsupported "free/unlimited" without current terms and time window
-- Generated gaming footage presented as actual unreleased game footage
-- Fake first-person test experience
-- Paid collaboration hidden in a neutral recommendation
-- Rewritten CTA that changes the promised asset or keyword
+- A required “free” or “unlimited” line with no current terms or time window behind it.
+- A required claim dropped from the draft with no note, leaving the creator with an unresolved brief.
+- Generated footage presented as real product, game or customer footage.
+- A first-person “I've been using this for weeks” the creator never said.
+- A paid placement written to sound like a neutral recommendation.
+- A reworded CTA that changes the keyword, asset or promise the sponsor is tracking.
+- The product or campaign drifting midway through, so the script describes a different tool from the one in the footage.

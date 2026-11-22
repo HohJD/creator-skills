@@ -1,6 +1,6 @@
 ---
 name: audio-description
-description: Write an audio-description script for essential visual information in video, using verified dialogue gaps or integrated narration, with coverage and timing notes.
+description: Write an audio-description script that gives blind and low-vision viewers the essential visuals in a video, placed in verified dialogue gaps or folded into existing narration, with a cue sheet and timing notes. Use when someone asks for audio description, AD, described video or narration of on-screen action for accessibility. Not for dialogue subtitles (subtitle-editor) or alt text for a still image (image-descriptions).
 license: Apache-2.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: social-thread
-description: Write a connected sequence of short text posts for X or another requested platform, with a substantial opening, independently intelligible posts and grounded sourcing.
+description: Write a thread of connected short text posts for X, Threads, Bluesky or another platform, with a substantial first post, posts that make sense alone and qualifiers kept beside the claims they limit. Use when someone asks for a thread, tweetstorm or series of connected posts. Not for a single post caption (social-captions) or a swipe carousel (carouselcraft).
 license: Apache-2.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: shoot-plan
-description: Plan coverage, setups, B-roll, sound and continuity for creator shoots, product demonstrations and short documentaries using the available time, crew and gear.
+description: Plan coverage, setups, B-roll, sound and continuity for a creator shoot, product demo or short documentary in shoot order, using the actual time, crew and gear, with extra care for actions that happen only once. Use when someone asks for a shot list, B-roll list, coverage plan or what to film. Not for viewing-order storyboard panels (storyboard-sequence) or the spoken narration (scriptcraft).
 license: Apache-2.0
 ---
 

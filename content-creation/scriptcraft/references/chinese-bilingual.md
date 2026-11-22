@@ -1,20 +1,20 @@
-# Chinese/XHS voiceover with English filming notes
+# Mandarin and bilingual voiceovers
 
-Do not translate the English script word-for-word. Write colloquial Mandarin that a creator can **say comfortably**; use contextual Chinese vocabulary and retain brand/UI labels as on screen.
+Don't translate an English script word for word. Write colloquial Mandarin the creator can say comfortably, with everyday vocabulary for the context. Keep brand names and UI labels exactly as they appear on screen.
 
-## Preferred output when bilingual is requested
+## Output shape
 
-`Duration | Visual (English) | 口播 (中文) | Subtitle (English)` — unless the user specifies *exactly* three columns, in which case respect their format and put subtitle cues inside Visual or Script only as requested.
+For a bilingual request with no format given, use `Duration | Visual (English) | 口播 (中文) | Subtitle (English)`. If the creator names their own columns, use those and put subtitle text only where they ask for it.
 
 ## Voice
 
-- Open with an observable fact or playful reaction: `我真的试了一下…`, `你看这个效果…`, `原来…也可以这样做` if the result was indeed tested.
-- Natural reactions can be playful, not forced: `这也太夸张了吧`, `钱包终于可以休息了`, but only when justified by the footage and not overused.
-- Show the action with short commands: `打开…`, `选这个模板`, `上传照片`, `生成`, `你看结果`.
-- For a novice, briefly explain English acronyms in context (MCP, API, repo) without lecturing.
-- Keep subtitle timing plausible; an English subtitle should reflect meaning, not every discourse filler.
-- Keep exact giveaway/comment keyword `留言「AI」` / `留言「FABLE」` / user-supplied phrase unchanged.
+- Open on something the viewer can see or a natural reaction: `你看这个效果…`, `原来…也可以这样做`. Use `我真的试了一下…` only when the creator actually tried it.
+- Reactions such as `这也太夸张了吧` can work when the footage earns them. Use one, not one per line.
+- Give actions as short spoken commands: `打开…`, `选这个模板`, `上传照片`, `点生成`, `你看结果`.
+- For a novice audience, gloss an English acronym once in passing (MCP, API, repo) without stopping to lecture.
+- Pace Mandarin on its own, at roughly 4 characters per second. An English subtitle carries the meaning of the line, not every filler word.
+- Keep a comment keyword or giveaway phrase exactly as supplied, including its brackets, for example `留言「关键词」`.
 
-## Chinese ethics
+## Claims
 
-Avoid false claims like `免费无限`, `全网最强`, `100%` unless source scope/date and terms are verified. Use `目前页面显示…` only with actual contemporaneous proof. Sponsor disclosure must remain understandable in the target language.
+Avoid `免费无限`, `全网最强`, `100%` and similar unless the terms, scope and date are verified. Say `目前页面显示…` only when you have a dated capture of that page. The sponsor disclosure must stay clear to a Mandarin-speaking viewer, not only in an English caption.

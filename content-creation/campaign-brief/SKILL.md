@@ -1,6 +1,6 @@
 ---
 name: campaign-brief
-description: Turn campaign notes into a creator-ready production brief with deliverables, claim evidence, audience action, creative room, approval dependencies and open decisions.
+description: Turn sponsor or campaign notes into a creator-ready production brief that separates required, suggested and unconfirmed items, with deliverables, mandatory wording, the shots that prove each claim, approvals and open decisions. Use when someone shares a sponsor brief, UGC request or brand deal notes and needs a plan to shoot from. Not for the final spoken script (scriptcraft) or tracking links (campaign-links).
 license: Apache-2.0
 ---
 

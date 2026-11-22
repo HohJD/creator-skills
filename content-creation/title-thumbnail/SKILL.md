@@ -1,6 +1,6 @@
 ---
 name: title-thumbnail
-description: Create matched YouTube video titles and thumbnail concepts from footage or a brief, compare search and discovery angles, and supply crop directions or illustration prompts.
+description: Create matched YouTube title and thumbnail pairs from footage or a brief, compare search-led and browse-led angles, and give real-frame crop directions, overlay text or illustration prompts. Use when someone asks for a video title, thumbnail idea, title options or a packaging check before upload. Not for email subject lines (newsletter-editor), article SEO titles (search-article) or post-release CTR analysis (creator-analytics).
 license: Apache-2.0
 ---
 

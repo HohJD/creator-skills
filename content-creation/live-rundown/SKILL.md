@@ -1,6 +1,6 @@
 ---
 name: live-rundown
-description: Prepare a timed run of show for a creator livestream, webinar or live demo, with host cues, transitions, contingency timing, guest dependencies and a hard end.
+description: Prepare a timed run of show for a creator livestream, webinar or live demo, with host cues, transitions, guest dependencies, workable fallbacks and a total that fits the hard end. Use when someone asks for a livestream plan, run of show, webinar agenda or live demo rundown. Not for a recorded interview guide (interview-guide) or a multi-week calendar (content-planner).
 license: Apache-2.0
 ---
 

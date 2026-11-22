@@ -1,6 +1,6 @@
 ---
 name: community-replies
-description: Draft responses to viewer questions, factual corrections and recurring comments on a creator post, including a pinned clarification grounded in the original material.
+description: Draft replies to viewer questions, corrections and recurring comments on a creator post, plus a pinned clarification grounded in confirmed facts and written in the creator's register. Use when someone pastes comments and asks how to reply, wants a pinned comment or needs to correct a mistake publicly. Not for finding themes across many comments (audience-listening) or moderating, hiding or posting on the account.
 license: Apache-2.0
 ---
 

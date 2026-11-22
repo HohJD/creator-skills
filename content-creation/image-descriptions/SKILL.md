@@ -1,6 +1,6 @@
 ---
 name: image-descriptions
-description: Write contextual alt text, carousel accessibility descriptions and longer explanations for charts, diagrams, functional images or photos in editorial content.
+description: Write contextual alt text, carousel card descriptions and longer text equivalents for charts, diagrams, functional images and photos in posts, articles and newsletters. Use when someone asks for alt text, an image description, accessibility text for a carousel or a text version of a chart. Not for the promotional caption under a post (social-captions) or narration of video visuals (audio-description).
 license: Apache-2.0
 ---
 

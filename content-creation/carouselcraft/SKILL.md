@@ -1,6 +1,6 @@
 ---
 name: carouselcraft
-description: Turn a topic, brief, images or notes into a swipeable social carousel. Use for slide-by-slide copy, carousel formats, reusable writing prompts and visual prompts for Instagram, LinkedIn or Xiaohongshu posts.
+description: Turn a topic, brief, images or notes into a swipeable carousel post for Instagram, LinkedIn or Xiaohongshu, with on-card copy and a visual prompt per slide, or a menu of carousel formats with reusable writing prompts. Use when someone asks for a carousel, swipe post, slide-by-slide post or carousel ideas. Not for a website image slider or carousel component (a coding task), tap-through Stories (vertical-stories) or presentation decks.
 license: Apache-2.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: podcast-notes
-description: Turn a recorded episode or supplied transcript into listener-facing show notes, resource links and navigable chapters with source-grounded timestamps.
+description: Turn a recorded episode or transcript into listener-facing show notes, an episode description, resource links and chapters with timestamps tied to the final master. Use when someone asks for show notes, an episode description, podcast chapters or timestamps for a finished episode. Not for questions before recording (interview-guide) or picking short clips (clip-selects).
 license: Apache-2.0
 ---
 

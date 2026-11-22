@@ -1,6 +1,6 @@
 ---
 name: subtitle-editor
-description: Edit spoken captions against a transcript or recording and deliver timed SRT or WebVTT, translated subtitles or clearly marked untimed cue text.
+description: Edit spoken captions against a transcript or recording and deliver timed SRT or WebVTT files, translated subtitle tracks or clearly marked untimed cue text, with a bundled exporter that turns aligned cues into SRT or VTT. Use when someone asks for subtitles, closed captions, an SRT or VTT file, or to fix caption timing or line breaks. Not for the caption under a social post (social-captions) or describing visuals for blind viewers (audio-description).
 license: Apache-2.0
 ---
 

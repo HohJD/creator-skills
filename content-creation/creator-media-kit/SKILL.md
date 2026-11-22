@@ -1,6 +1,6 @@
 ---
 name: creator-media-kit
-description: Build a partner-facing creator one-sheet from supplied audience metrics, evidence, samples and collaboration options, or audit an existing media kit before sharing.
+description: Build a partner-facing creator one-sheet from supplied metrics, samples and collaboration offers, with dated, sourced numbers and no inflated reach, or audit an existing media kit before sending. Use when someone asks for a media kit, sponsor one-pager, brand pitch sheet or creator one-sheet. Not for analysing post performance (creator-analytics) or a sponsor's production brief (campaign-brief).
 license: Apache-2.0
 ---
 

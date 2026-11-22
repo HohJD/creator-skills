@@ -1,4 +1,4 @@
-# Longer developer build-along (2–20+ minutes)
+# Longer developer build-along (2 to 20+ minutes)
 
 ## Goal is transfer, not watch time
 
@@ -16,9 +16,9 @@ A viewer should finish able to reproduce a small working result, understand the 
 8. **Verify:** test current version, compare observed results to promised.
 9. **Transfer:** recap mental model and useful extension.
 
-### Required annotations
+### Annotations for a production table
 
-At each substantial beat include Narration, Screen, Expected observation, User action, Claim/evidence ID, Failure if likely, Approximate time. Annotate every terminal command, path, feature flag and UI label. A user should never be forced to infer which tab/menu a narrator means.
+When the creator asks for a full production plan, give each substantial beat: Narration, Screen, Expected observation, User action, Claim/evidence ID, Failure if likely, Approximate time. For a script-only request, keep the voiceover clean and put only the exact commands, paths and labels in short shot notes. Keep every terminal command, path, feature flag and UI label exact. A user should never be forced to infer which tab/menu a narrator means.
 
 ## Multimedia cognition
 

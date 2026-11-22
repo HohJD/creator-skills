@@ -1,6 +1,6 @@
 ---
 name: creator-fact-check
-description: Check factual claims in a creator post, video, article or sponsor brief against available primary sources and supplied demonstrations, and suggest exact publishable corrections.
+description: Check consequential claims in a creator post, video, article or sponsor brief against primary sources and supplied demonstrations, and return a claim ledger with status, evidence and the smallest accurate replacement. Use when someone asks to fact-check, verify a claim, confirm a price or offer is still current, or audit a draft before publishing. Not for rewriting a script in the creator's voice (scriptcraft) or refreshing a whole old article (content-refresh).
 license: Apache-2.0
 ---
 

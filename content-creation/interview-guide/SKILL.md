@@ -1,6 +1,6 @@
 ---
 name: interview-guide
-description: Prepare a timed question guide and follow-ups for a creator interview, profile, podcast conversation or documentary scene from the guest brief and recording constraints.
+description: Prepare a timed question guide with branching follow-ups for a creator interview, profile, podcast conversation or documentary scene, from the guest brief and recording constraints. Use when someone asks for interview questions, a guest prep sheet or a running order for a conversation that has not been recorded yet. Not for show notes on a recorded episode (podcast-notes) or a livestream run of show (live-rundown).
 license: Apache-2.0
 ---
 

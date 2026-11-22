@@ -2,7 +2,7 @@
 
 A 100-point rubric is a project-quality tool, **not a scientific measure of virality**.
 
-| Dimension | Max | What 5/5 equivalent looks like |
+| Dimension | Max | Full marks look like |
 |---|---:|---|
 | Factual integrity | 20 | Claims have source/observed proof; no invented app steps |
 | Natural voice | 15 | Easy to read aloud; human rhythm; source voice respected |

@@ -1,4 +1,4 @@
-# Final review — release gate
+# Final review before recording
 
 ## A. Critical blockers
 

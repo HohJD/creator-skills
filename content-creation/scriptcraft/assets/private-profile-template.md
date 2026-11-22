@@ -1,4 +1,4 @@
-# Private voice profile — local use only
+# Private voice profile (local use only)
 
 ## Provenance and coverage
 

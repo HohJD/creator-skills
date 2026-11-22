@@ -1,6 +1,6 @@
 ---
 name: content-refresh
-description: Revise an existing published article, guide or resource by comparing dated claims against current evidence, preserving valid material and documenting substantive corrections.
+description: Revise an existing published article, guide or resource by comparing dated claims against current evidence, carrying each fix through headings, captions and repeated text, and writing a change note only when the substance changed. Use when someone asks to update, refresh or correct an old post or tutorial. Not for a new article from scratch (search-article) or a prepublication audit of a new draft (creator-fact-check).
 license: Apache-2.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: vertical-stories
-description: Design tap-through social Stories with exact frame copy, asset direction, optional interactive prompts and a useful path for viewers who skip the interaction.
+description: Design a tap-through Instagram or Facebook Story sequence with exact overlay copy per frame, asset direction, optional polls or question stickers and a reveal that still works for viewers who skip the interaction. Use when someone asks for a Story, Story sequence, poll Story or frames for Stories. Not for a feed carousel (carouselcraft) or a Reel voiceover (scriptcraft).
 license: Apache-2.0
 ---
 

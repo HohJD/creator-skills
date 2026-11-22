@@ -1,6 +1,6 @@
 ---
 name: clip-selects
-description: Find self-contained highlights in a supplied recording or transcript, produce source-grounded cut notes and preserve the speaker’s meaning when adapting long footage into short clips.
+description: Find self-contained highlights in a supplied recording or transcript and return a paper edit with source locators, first and last words, context cards and the qualifiers a cut must keep, so short clips keep the speaker's meaning. Use when someone asks for clips, highlights, soundbites, a paper edit or which moments to cut for Shorts or Reels. Not for writing new narration (scriptcraft) or podcast chapters (podcast-notes).
 license: Apache-2.0
 ---
 

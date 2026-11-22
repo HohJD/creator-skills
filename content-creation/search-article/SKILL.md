@@ -1,6 +1,6 @@
 ---
 name: search-article
-description: Draft a useful blog article or search-oriented editorial brief around a concrete reader question, credible sources, hands-on material and a clear answer.
+description: Draft a blog article or search-oriented editorial brief around a concrete reader question, with the answer near the top, first-hand material, sources beside claims and an honest title and meta description. Use when someone asks for a blog post, SEO article, how-to guide or article brief for a search query. Not for updating an existing page (content-refresh) or a newsletter issue (newsletter-editor).
 license: Apache-2.0
 ---
 

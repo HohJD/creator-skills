@@ -1,6 +1,6 @@
 ---
 name: asset-credits
-description: Build an attribution ledger and publishable credit blocks for supplied images, audio, footage or illustrations, preserving source records, licence links and modification notes.
+description: Build an attribution ledger and paste-ready credit blocks for supplied images, music, footage or illustrations, keeping source records, licence versions, links and modification notes, and holding anything whose rights are unclear. Use when someone asks for credits, attributions, a licence checklist or end credits for borrowed assets. Not a legal clearance, and not for alt text (image-descriptions).
 license: Apache-2.0
 ---
 

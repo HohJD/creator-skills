@@ -1,6 +1,6 @@
 ---
 name: content-localization
-description: Adapt a supplied post, carousel, newsletter or spoken line to a target language and locale while preserving meaning, creator voice, factual qualifiers, labels and disclosures.
+description: Adapt a supplied post, carousel, newsletter or spoken line into another language and locale while preserving meaning, creator voice, factual qualifiers, on-screen UI labels, promo codes and disclosures. Use when someone asks to translate, localize or adapt copy for Mandarin, Spanish or another market. Not for timed subtitle files (subtitle-editor) or a new Mandarin voiceover written from a demo (scriptcraft).
 license: Apache-2.0
 ---
 

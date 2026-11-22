@@ -1,6 +1,6 @@
 ---
 name: content-repurpose
-description: Adapt one supplied interview, tutorial, essay or recording into distinct channel-ready pieces with traceable source moments, accurate quotations and channel-specific copy.
+description: Adapt one supplied interview, tutorial, essay or recording into distinct pieces for several channels, each with its own reader job, traceable source passages, accurate quotations and the original caveats intact. Use when someone asks to repurpose, cross-post, turn one piece into several, or adapt a video into posts and an email. Not for translating into another language (content-localization) or choosing timed video clips (clip-selects).
 license: Apache-2.0
 ---
 

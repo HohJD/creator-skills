@@ -1,6 +1,6 @@
 ---
 name: creator-analytics
-description: Interpret supplied post or video analytics, check comparable denominators and time windows, and design a useful editorial experiment from limited audience data.
+description: Interpret supplied post or video analytics with explicit denominators, matched time windows and percentage-point arithmetic, separate observation from explanation, and design one controlled next test. Use when someone shares views, CTR, retention or engagement numbers and asks what worked, why a post underperformed or what to test next. Not for themes in viewer comments (audience-listening) or partner-facing media kits (creator-media-kit).
 license: Apache-2.0
 ---
 

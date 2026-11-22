@@ -1,6 +1,6 @@
 ---
 name: social-captions
-description: Write or revise the text accompanying photos, Reels and carousel posts, including post openers, contextual captions, launch announcements and restrained calls to action.
+description: Write or revise the caption that goes under a photo, Reel or carousel post, including openers, behind-the-scenes notes, launch announcements, sponsored posts and restrained calls to action. Use when someone asks for a caption, post copy, a few caption options or a CTA for a post. Not for timed subtitles or closed captions synced to video (subtitle-editor), alt text (image-descriptions) or multi-post threads (social-thread).
 license: Apache-2.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: newsletter-editor
-description: Write or edit a creator newsletter issue, subject line, preheader and descriptive link text from a draft, source note, release or editorial brief.
+description: Write or edit a creator newsletter issue with subject line, preheader, body and descriptive link text, from a draft, source note, release or brief. Use when someone asks for a newsletter, email issue, subject line or preheader for subscribers. Not for YouTube titles (title-thumbnail), campaign URL tagging (campaign-links) or social captions (social-captions).
 license: Apache-2.0
 ---
 

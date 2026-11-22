@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Rewrote all 30 skill descriptions to state when each skill should fire and which sibling handles near-miss requests. Lint now requires a "Use when" clause, YAML-safe descriptions and valid sibling references.
+
+- Sharpened ScriptCraft with a job picker, a default output shape, pacing rules for English and Mandarin, an invented edit example and a pre-handover check. Cleaned up the sponsor, bilingual, longform and rubric references.
+
 - Verified all 30 skills with Codex CLI and Claude Code discovery. Documented both invocation forms, added four-scope install checks, and moved upgrade backups outside skill discovery.
 
 - Added 13 skills for partner work, web and social publishing, production and distribution, with an offline UTM builder and an audience-to-Story worked example.

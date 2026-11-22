@@ -1,6 +1,6 @@
 ---
 name: audience-listening
-description: Turn supplied viewer comments, search questions or support notes into evidence-backed content opportunities with traceable examples and limits on what can be inferred.
+description: Turn supplied viewer comments, search queries or support notes into evidence-backed content opportunities, with themes, supporting item IDs, honest counts, counterexamples and limits on what the sample can show. Use when someone asks what their audience wants, what to make next from comments, or to find patterns in viewer questions. Not for replying to individual comments (community-replies) or analysing views and clicks (creator-analytics).
 license: Apache-2.0
 ---
 

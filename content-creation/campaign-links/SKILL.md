@@ -1,6 +1,6 @@
 ---
 name: campaign-links
-description: Build consistent campaign URLs for creator newsletters, bios, posts and partner placements. Deliver a tagged link per placement and an offline check of its destination.
+description: Build consistent UTM-tagged campaign URLs for newsletters, bios, posts and partner placements with a bundled offline tagger that keeps existing query values and anchors, plus a placement-to-tag map. Use when someone asks for UTM links, tracking links, campaign URLs or link tagging. Not for analysing the resulting clicks (creator-analytics) or shortening links through an external service.
 license: Apache-2.0
 ---
 
