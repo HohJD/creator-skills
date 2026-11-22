@@ -10,7 +10,7 @@ Start with the approved destination, placement list, reporting scheme, source, m
 
 Keep the base path, unrelated query fields and any fragment. Treat signed or expiring links as unsuitable for editing until the owner supplies a taggable destination. If a submitted link already has different campaign values, report the conflict before replacing them. Give the user the final URLs and a readable placement-to-tag mapping. Distinguish an offline review from a tested redirect or verified analytics event.
 
-For an ordinary absolute HTTP(S) URL, the bundled `scripts/tag_url.py` builds a link without contacting the destination. From the skill directory run `python3 scripts/tag_url.py URL --source SOURCE --medium MEDIUM --campaign CAMPAIGN`; add `--content LABEL` for a variant. It preserves unrelated raw query segments and rejects duplicate or conflicting tags in the fields it manages. Quote the URL and values in a shell.
+For an ordinary absolute HTTP(S) URL, the bundled `scripts/tag_url.py` builds a link without contacting the destination. Resolve the script beside the installed SKILL.md and run `python3 "/path/to/campaign-links/scripts/tag_url.py" URL --source SOURCE --medium MEDIUM --campaign CAMPAIGN`; add `--content LABEL` for a variant. It preserves unrelated raw query segments and rejects duplicate or conflicting tags in the fields it manages. Quote the URL and values in a shell.
 
 ## Copyable brief
 

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Verified all 30 skills with Codex CLI and Claude Code discovery. Documented both invocation forms, added four-scope install checks, and moved upgrade backups outside skill discovery.
+
 - Added 13 skills for partner work, web and social publishing, production and distribution, with an offline UTM builder and an audience-to-Story worked example.
 
 - Added 15 creator workflows spanning social copy, subtitles, accessibility, planning, production, localization, distribution and measurement. Added a standard-library SRT/WebVTT exporter, worked examples and behavioural trial notes.

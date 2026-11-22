@@ -5,6 +5,7 @@ import argparse
 from pathlib import Path
 import shutil
 import sys
+import tempfile
 from datetime import datetime, timezone
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -23,23 +24,36 @@ def install(agent:str,scope:str,target:Path|None=None,force:bool=False, *, skill
             names = ", ".join(item.name for item in skills)
             raise ValueError(f"Unknown skill {skill!r}. Available skills: {names}")
         skills = selected
-    collisions=[destination/p.name for p in skills if (destination/p.name).exists()]
+    collisions = [destination / p.name for p in skills
+                  if (destination / p.name).exists() or (destination / p.name).is_symlink()]
     if collisions and not force:
         raise FileExistsError("Existing skills will not be overwritten: "+", ".join(map(str,collisions))+"; pass --force to back up and replace")
     destination.mkdir(parents=True,exist_ok=True)
     created=[]
     for item in skills:
-        dst=destination/item.name
-        if dst.exists():
-            stamp=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
-            backup=destination/(item.name+".backup-"+stamp)
-            suffix=1
-            while backup.exists():
-                backup=destination/(item.name+".backup-"+stamp+f"-{suffix}")
-                suffix+=1
-            dst.rename(backup)
-            print(f"Backed up {dst} -> {backup}")
-        shutil.copytree(item,dst)
+        dst = destination / item.name
+        # Finish the copy outside the host's discovery directory before changing a live skill.
+        with tempfile.TemporaryDirectory(prefix=".creator-skills-stage-", dir=destination.parent) as tmp:
+            staged = Path(tmp) / item.name
+            shutil.copytree(item, staged, ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
+            backup = None
+            if dst.exists() or dst.is_symlink():
+                if not force:
+                    raise FileExistsError(f"Existing skill will not be overwritten: {dst}")
+                archive = destination.parent / "creator-skills-backups"
+                archive.mkdir(exist_ok=True)
+                stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+                batch = Path(tempfile.mkdtemp(prefix=f"{stamp}-", dir=archive))
+                backup = batch / item.name
+                dst.rename(backup)
+            try:
+                staged.rename(dst)
+            except OSError:
+                if backup is not None and not dst.exists() and not dst.is_symlink():
+                    backup.rename(dst)
+                raise
+            if backup is not None:
+                print(f"Backed up {dst} -> {backup}")
         created.append(dst)
     return created
 

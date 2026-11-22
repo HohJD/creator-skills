@@ -12,7 +12,7 @@ For same-language captions, preserve meaning, negations, names and relevant hesi
 
 Break on natural phrase boundaries. Preserve verified intervals when they suffice. Splitting a supplied interval more precisely requires word timing or an audio check. Keep each end after its start and cue starts in order. Inspect overlaps against what is actually audible; simultaneous speakers can be legitimate. Follow the target player's reading-speed and layout guidance when specified.
 
-For a timed file, put notes outside its body. Basic SRT uses numbered blocks and comma milliseconds. WebVTT begins with WEBVTT and uses dot milliseconds. For simple, already aligned cues, the bundled `scripts/export_captions.py` accepts UTF-8 JSON objects in an array with integer `start_ms`, `end_ms` and plain `text`. Run `python3 scripts/export_captions.py cues.json --format vtt` from this skill folder, or choose `srt`. It writes the track to stdout. Verify sync, attribution and line breaks on playback when media is available.
+For a timed file, put notes outside its body. Basic SRT uses numbered blocks and comma milliseconds. WebVTT begins with WEBVTT and uses dot milliseconds. For simple, already aligned cues, the bundled `scripts/export_captions.py` accepts UTF-8 JSON objects in an array with integer `start_ms`, `end_ms` and plain `text`. Resolve the script relative to this installed SKILL.md and the input relative to the user’s project. From the project, run `python3 "/path/to/subtitle-editor/scripts/export_captions.py" "cues.json" --format vtt`, or choose `srt`. It writes the track to stdout. Verify sync, attribution and line breaks on playback when media is available.
 
 ## Try it
 

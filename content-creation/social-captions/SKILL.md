@@ -16,6 +16,8 @@ Choose the shape that earns its space:
 - **Conversation:** ask a question whose answers would actually help the creator or reader.
 - **Sponsored:** preserve the required disclosure, spelling and placement. Surface any unsupported offer or claim separately.
 
+If the user asks for one caption only, return just the publishable words. Use only the supplied details. A strong one-line note can stand as the entire caption, especially if no photo is available.
+
 Write the caption in paste-ready form. For variants, vary the angle or intent and say which one you would use if asked. Fit the requested language and length. Use hashtags or emoji when requested or when they carry meaning. Concrete observations carry more voice than a stock phrase about the creative journey. For more copyable briefs, see `references/caption-prompts.md`. Never manufacture a giveaway, scarcity, a personal reaction or a promise to send something. If the user asks for a strict character count, count the final string and state the counting convention when it matters.
 
 ## Try it

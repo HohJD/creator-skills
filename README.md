@@ -49,7 +49,9 @@ cd creator-skills
 | Claude Code | `python3 tools/install.py --agent claude --scope user` | `python3 tools/install.py --agent claude --scope project --target /path/to/project` |
 | Codex | `python3 tools/install.py --agent codex --scope user` | `python3 tools/install.py --agent codex --scope project --target /path/to/project` |
 
-By default, the installer copies all skills into `.claude/skills/` or `.agents/skills/` under your home or project directory. If you're updating an existing installation, add `--force` to back up the old copy before replacing it.
+Use `$skill-name` in Codex and `/skill-name` in Claude Code. The [prompt library](docs/CREATOR-PROMPTS.md) gives both commands for every skill. See the [cross-host compatibility report](docs/HOST-COMPATIBILITY.md) for versions, checks and results.
+
+By default, the installer copies all skills into `.claude/skills/` or `.agents/skills/` under your home or project directory. If you're updating an existing installation, add `--force` to back up the old copy before replacing it. Backups live in `creator-skills-backups/` beside the host’s `skills/` directory, outside skill discovery.
 
 To add just the social caption skill to an existing Codex setup, run:
 
