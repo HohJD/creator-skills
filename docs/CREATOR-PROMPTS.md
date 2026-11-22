@@ -93,3 +93,83 @@ Replace the brackets with your material. In Codex, start with the skill name sho
 [Worked example and sources](../content-creation/creator-fact-check/SKILL.md#worked-example)
 
 For video scripts and swipe posts, see [ScriptCraft](../content-creation/scriptcraft/SKILL.md) and [CarouselCraft’s eight format prompts](../content-creation/carouselcraft/references/format-prompts.md).
+
+## More creator workflows
+
+### Audience listening
+
+> $audience-listening Use [comments or queries] from [channel/window] to find three reader needs. Show which items support each, a counterexample where relevant, and one piece we can make next.
+
+[Worked example and source](../content-creation/audience-listening/SKILL.md#worked-example)
+
+### Creator media kit
+
+> $creator-media-kit Build a one-page media kit for [partner type] using [work, metrics and dates]. Lead with why my work fits. Separate confirmed offers from ideas and flag missing contact details outside the copy.
+
+[Worked example and source](../content-creation/creator-media-kit/SKILL.md#worked-example)
+
+### Sponsor and UGC brief
+
+> $campaign-brief Make a one-page UGC brief from [campaign notes]. Separate mandatory copy from choices I can make. List the shots that establish each claim, delivery specs and unresolved approvals.
+
+[Worked example and source](../content-creation/campaign-brief/SKILL.md#worked-example)
+
+### Search-led articles
+
+> $search-article Write [article or brief] for someone searching [question]. Use [original observations/sources]. Answer the question early, show what the reader can verify, and keep unsupported product claims out.
+
+[Worked example and source](../content-creation/search-article/SKILL.md#worked-example)
+
+### Content refresh and corrections
+
+> $content-refresh Refresh [old page] using [release note or corrected evidence]. Give me paste-ready replacements, every affected placement and a short change note if the substance changed.
+
+[Worked example and source](../content-creation/content-refresh/SKILL.md#worked-example)
+
+### Vertical Story sequences
+
+> $vertical-stories Make a [number]-frame Story about [material]. Use one optional [poll or question] and give the answer in the sequence. Include exact overlays, assets, and a fallback without stickers.
+
+[Worked example and source](../content-creation/vertical-stories/SKILL.md#worked-example)
+
+### Social post threads
+
+> $social-thread Turn [source note] into [number] text posts. Lead with the result, keep the sample limits near it, and give each post a useful job. No sales CTA.
+
+[Worked example and source](../content-creation/social-thread/SKILL.md#worked-example)
+
+### Visual prompt packs
+
+> $visual-prompt-pack Make [number] standalone image prompts for [series]. Keep [palette, subject and aspect ratio] fixed. Vary only [distance/action/composition]. Leave [area] free for editable text.
+
+[Worked example and source](../content-creation/visual-prompt-pack/SKILL.md#worked-example)
+
+### Storyboards and continuity
+
+> $storyboard-sequence Storyboard [scene] into [number] panels. Track the prop state and screen direction. Return start frame, action, end frame, audio and cut for each.
+
+[Worked example and source](../content-creation/storyboard-sequence/SKILL.md#worked-example)
+
+### Livestream run of show
+
+> $live-rundown Build a [minutes]-minute live rundown for [demo]. I have [crew/assets] and a hard stop at [time]. Include transitions, a late-guest fallback and a timing check.
+
+[Worked example and source](../content-creation/live-rundown/SKILL.md#worked-example)
+
+### Audio-description writing
+
+> $audio-description From [final video or visual/sound log], describe only what a listener needs. Keep the dialogue and [sound] clear. Mark lines needing a timed read.
+
+[Worked example and source](../content-creation/audio-description/SKILL.md#worked-example)
+
+### Asset attribution and credit sheets
+
+> $asset-credits Turn [asset records] into a credits ledger and a paste-ready caption/end-credit block. Show any missing source or permission separately. Preserve licence versions and edits.
+
+[Worked example and source](../content-creation/asset-credits/SKILL.md#worked-example)
+
+### Campaign links and UTM handoff
+
+> $campaign-links Build campaign links to [approved URL] for [placements]. Use [existing source/medium naming scheme], campaign [name] and one content label per creative. Preserve existing query values and the page anchor.
+
+[Worked example and source](../content-creation/campaign-links/SKILL.md#worked-example)

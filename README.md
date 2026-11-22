@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/HohJD/creator-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/HohJD/creator-skills/actions/workflows/ci.yml)
 
-CreatorSkills is a library of 17 skills for creators who write, film, edit and publish with Codex or Claude Code. Bring the material you actually have: a rough take, two photos, a transcript, a sponsor brief or a small set of analytics.
+CreatorSkills is a library of 30 skills for creators who write, film, edit and publish with Codex or Claude Code. Bring the material you actually have: a rough take, two photos, a transcript, a sponsor brief or a small set of analytics.
 
 ### Which caption do you need?
 
@@ -22,7 +22,18 @@ CreatorSkills is a library of 17 skills for creators who write, film, edit and p
 | Publish and adapt | [Social captions](content-creation/social-captions/SKILL.md) · [Image descriptions](content-creation/image-descriptions/SKILL.md) · [Creator newsletter](content-creation/newsletter-editor/SKILL.md) · [Podcast show notes](content-creation/podcast-notes/SKILL.md) · [Content repurposing](content-creation/content-repurpose/SKILL.md) · [Localization](content-creation/content-localization/SKILL.md) |
 | After publication | [Community replies](content-creation/community-replies/SKILL.md) · [Creator analytics](content-creation/creator-analytics/SKILL.md) |
 
-[Browse prompts and worked examples](docs/CREATOR-PROMPTS.md) · [Eight carousel formats](content-creation/carouselcraft/references/format-prompts.md) · [Five-card Grok Bot example](examples/grok-bot-carousel/) · [See what was tested](docs/CREATOR-TRIALS.md)
+### More creator workflows
+
+| Job | Skills |
+| --- | --- |
+| Get the assignment right | [Audience listening](content-creation/audience-listening/SKILL.md) · [Creator media kit](content-creation/creator-media-kit/SKILL.md) · [Sponsor and UGC brief](content-creation/campaign-brief/SKILL.md) |
+| Publish in another format | [Search article](content-creation/search-article/SKILL.md) · [Content refresh](content-creation/content-refresh/SKILL.md) · [Vertical Stories](content-creation/vertical-stories/SKILL.md) · [Social thread](content-creation/social-thread/SKILL.md) |
+| Direct the production | [Visual prompt packs](content-creation/visual-prompt-pack/SKILL.md) · [Storyboards](content-creation/storyboard-sequence/SKILL.md) · [Live rundown](content-creation/live-rundown/SKILL.md) |
+| Prepare the handoff | [Audio description](content-creation/audio-description/SKILL.md) · [Asset credits](content-creation/asset-credits/SKILL.md) · [Campaign links and UTM builder](content-creation/campaign-links/SKILL.md) |
+
+**Try three skills together:** [Turn reader comments into a three-frame Story and two trackable links](examples/audience-to-story/).
+
+[Browse prompts and worked examples](docs/CREATOR-PROMPTS.md) · [Eight carousel formats](content-creation/carouselcraft/references/format-prompts.md) · [Five-card Grok Bot example](examples/grok-bot-carousel/) · [Earlier trials](docs/CREATOR-TRIALS.md) · [Latest discovery and trials](docs/EXPANSION-2026-11-22.md)
 
 ## Install
 

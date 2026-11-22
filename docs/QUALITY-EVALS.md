@@ -57,3 +57,5 @@ No single numerical score establishes quality. Measure separate **critical hallu
 ## Current harness
 
 `python3 tools/run_evals.py` exercises JSON good/bad fixtures, missing claim references and the most basic red-flag validation. It **does not** call Claude or Codex, calculate model precision/recall, verify websites, or measure video retention. Add human review or a governed eval service when available.
+
+The [22 November discovery and trials](EXPANSION-2026-11-22.md) cover the next 13 skills and the campaign-link utility.
