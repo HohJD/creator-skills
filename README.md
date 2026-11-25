@@ -1,6 +1,10 @@
 # CreatorSkills
 
-[![CI](https://github.com/HohJD/creator-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/HohJD/creator-skills/actions/workflows/ci.yml)
+**Open-source skills and tools for creators.**
+
+By [AI Talent Labs](https://www.ai-talentlabs.com) · [Browse the skills](https://www.ai-talentlabs.com/library) · [Getting started](https://www.ai-talentlabs.com/getting-started) · [MCP & API](https://www.ai-talentlabs.com/agents)
+
+[![CI](https://github.com/AI-Talentlabs/creator-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/AI-Talentlabs/creator-skills/actions/workflows/ci.yml)
 
 CreatorSkills is a library of 30 skills for creators who write, film, edit and publish with Codex or Claude Code. Bring the material you actually have: a rough take, two photos, a transcript, a sponsor brief or a small set of analytics.
 
@@ -40,7 +44,7 @@ CreatorSkills is a library of 30 skills for creators who write, film, edit and p
 You'll need Python 3.10 or newer. Clone the repository, then pick the command for the agent you use.
 
 ```bash
-git clone https://github.com/HohJD/creator-skills.git
+git clone https://github.com/AI-Talentlabs/creator-skills.git
 cd creator-skills
 ```
 
