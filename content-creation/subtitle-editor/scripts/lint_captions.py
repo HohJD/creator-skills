@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check an SRT, WebVTT or cue-JSON track for timing and readability problems, offline."""
 import argparse
+import html
 import json
 import re
 import sys
@@ -25,12 +26,21 @@ RULES = {
 }
 DEFAULTS = {"max_chars": 42, "max_lines": 2, "min_ms": 833, "max_ms": 7000, "max_cps": 20.0}
 
-TIME = r"(?:(\d+):)?(\d{2}):(\d{2})[,.](\d{3})"
+TIME = r"(?:(\d+):)?(\d{2}):(\d{2})([,.])(\d{3})"
 TIMING = re.compile(rf"^\s*{TIME}\s*-->\s*{TIME}(?:\s+.*)?$")
 TAG = re.compile(r"</?[a-zA-Z][^>]*>|\{\\[^}]*\}")
 
 
-def _ms(h, m, s, f):
+METADATA = re.compile(r"^(?:NOTE(?:[ \t].*)?|STYLE|REGION)[ \t]*$")
+
+
+def _ms(h, m, s, sep, f, fmt):
+    """Milliseconds, or None if the timestamp isn't valid for the format: SRT writes a comma before the
+    milliseconds and WebVTT a full stop, and minutes and seconds run to 59."""
+    if sep != ("." if fmt == "vtt" else ",") or int(m) > 59 or int(s) > 59:
+        return None
+    if fmt == "srt" and h is None:
+        return None  # SRT always writes the hours
     return ((int(h or 0) * 60 + int(m)) * 60 + int(s)) * 1000 + int(f)
 
 
@@ -40,10 +50,14 @@ def parse(text, fmt=None):
     if fmt == "json" or (fmt is None and text.lstrip().startswith("[")):
         return [{"start_ms": c.get("start_ms"), "end_ms": c.get("end_ms"), "text": c.get("text") or "",
                  "line": None, "index": i} for i, c in enumerate(json.loads(text), start=1)]
+    fmt = fmt or ("vtt" if text.startswith("WEBVTT") else "srt")
     cues, lines, i = [], text.split("\n"), 0
     while i < len(lines):
-        if not lines[i].strip() or lines[i].startswith(("WEBVTT", "NOTE", "STYLE", "REGION")):
-            i = _skip_block(lines, i) if lines[i].startswith(("NOTE", "STYLE", "REGION")) else i + 1
+        if not lines[i].strip() or (fmt == "vtt" and i == 0):
+            i += 1
+            continue
+        if fmt == "vtt" and METADATA.match(lines[i]):
+            i = _skip_block(lines, i)
             continue
         block_start = i
         while i < len(lines) and lines[i].strip():
@@ -55,9 +69,9 @@ def parse(text, fmt=None):
                 cues.append({"start_ms": None, "end_ms": None, "text": "\n".join(block), "line": block_start + 1})
             continue
         m = TIMING.match(block[at])
-        start, end = (_ms(*m.groups()[:4]), _ms(*m.groups()[4:])) if m else (None, None)
+        start, end = (_ms(*m.groups()[:5], fmt), _ms(*m.groups()[5:], fmt)) if m else (None, None)
         cues.append({"start_ms": start, "end_ms": end, "text": "\n".join(block[at + 1:]),
-                     "line": block_start + at + 1})
+                     "line": block_start + at + 1, "vtt": fmt == "vtt"})
     return cues
 
 
@@ -67,8 +81,10 @@ def _skip_block(lines, i):
     return i
 
 
-def visible(text):
-    return [TAG.sub("", line).strip() for line in text.split("\n") if TAG.sub("", line).strip()]
+def visible(text, vtt=False):
+    """The lines a viewer reads: markup removed, and WebVTT's &amp; and &lt; shown as the one character they are."""
+    lines = [TAG.sub("", line) for line in text.split("\n")]
+    return [shown for line in lines if (shown := (html.unescape(line) if vtt else line).strip())]
 
 
 def check(cues, **limits):
@@ -85,7 +101,7 @@ def check(cues, **limits):
         if type(start) is not int or type(end) is not int:
             add("SUB001", cue, "timing can't be read")
             continue
-        lines = visible(cue.get("text", ""))
+        lines = visible(cue.get("text", ""), cue.get("vtt", False))
         if not lines:
             add("SUB004", cue, "cue has no text")
         if end <= start:

@@ -90,13 +90,21 @@ def codex_default_model() -> str:
     return (model.group(1) if model else "codex default") + (f", reasoning {effort.group(1)}" if effort else "")
 
 
+MISSING = "(no answer)"
+
+
 def parse_answer(text: str, count: int) -> list[str | None]:
+    """One answer per request: a skill name, None for an explicit "none", or MISSING, which scores as wrong."""
     match = re.search(r"\{.*\}", text, re.S)
-    data = json.loads(match.group(0)) if match else {}
+    try:
+        data = json.loads(match.group(0)) if match else {}
+    except json.JSONDecodeError:
+        data = {}
     answers = []
     for i in range(1, count + 1):
-        value = str(data.get(str(i), "")).strip().strip("`/$").lower()
-        answers.append(None if value in ("", "none", "null") else value)
+        raw = data.get(str(i))
+        value = "" if raw is None else str(raw).strip().strip("`/$").lower()
+        answers.append(MISSING if not value else None if value in ("none", "null") else value)
     return answers
 
 

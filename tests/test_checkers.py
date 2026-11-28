@@ -50,6 +50,21 @@ class SubtitleLintTests(unittest.TestCase):
                  "intro\n00:01.000 --> 00:03.000 align:center\n<v Ana><i>Short line</i>\n")
         self.assertEqual(subs.check(subs.parse(track)), [])
 
+    def test_timestamps_must_suit_the_format(self):
+        vtt = ("WEBVTT\n\n00:00:60.000 --> 00:01:02.000\nBad seconds\n\n"
+               "00:03,000 --> 00:04,000\nComma in WebVTT\n")
+        self.assertEqual(codes(subs.check(subs.parse(vtt))), ["SUB001", "SUB001"])
+        srt = "1\n00:00:01.000 --> 00:00:03.000\nFull stop in SRT\n"
+        self.assertEqual(codes(subs.check(subs.parse(srt))), ["SUB001"])
+
+    def test_a_cue_named_like_a_note_is_still_a_cue(self):
+        vtt = "WEBVTT\n\nNOTE a real comment\n\nNOTEBOOK\n00:01.000 --> 00:01.300\nWords\n"
+        self.assertEqual(codes(subs.check(subs.parse(vtt))), ["SUB103"])
+
+    def test_webvtt_escapes_count_as_one_character(self):
+        cue = "WEBVTT\n\n00:00.000 --> 00:02.000\nUse A &amp; B, C &amp; D, E &amp; F, and G &amp; H.\n"
+        self.assertEqual(subs.check(subs.parse(cue)), [])
+
     def test_limits_can_be_set_for_children_s_content(self):
         cue = [{"start_ms": 0, "end_ms": 1000, "text": "eighteen chars !!!"}]
         self.assertEqual(codes(subs.check(cue)), [])
@@ -88,6 +103,12 @@ class PostCheckTests(unittest.TestCase):
         self.assertEqual(codes(post.check("A thread.\n---\n#ad Acme paid for this", "x", thread=True,
                                           sponsored=True)), ["DIS602"])
 
+    def test_links_and_handles_are_not_disclosures(self):
+        for text in ("I love this lamp!\nhttps://acme.example/ad?ref=me", "Thanks @sponsoredlamp",
+                     "Write to ad@acme.example"):
+            with self.subTest(text=text):
+                self.assertEqual(codes(post.check(text, "instagram", sponsored=True)), ["DIS601"])
+
     def test_a_word_containing_ad_is_not_a_disclosure(self):
         self.assertEqual(codes(post.check("I read a lot and had a headache.", "instagram", sponsored=True)),
                          ["DIS601"])
@@ -125,7 +146,22 @@ class LocalizationTests(unittest.TestCase):
 
     def test_changed_numbers_months_and_links(self):
         bad = "Minggu Baiki: 6 April, 10:30 pagi.\nRM2,050 untuk 3 sesi. https://example.org/booking @kedai.pakali"
-        self.assertEqual(sorted(codes(loc.compare(self.EN, bad))), ["LOC501", "LOC502", "LOC503", "LOC504"])
+        self.assertEqual(sorted(codes(loc.compare(self.EN, bad))), ["LOC501", "LOC502", "LOC503", "LOC503", "LOC504"])
+
+    def test_dates_compare_day_and_month_together(self):
+        en = "Opens May 6; closes June 12."
+        self.assertEqual(codes(loc.compare(en, "Opens May 12; closes June 6.")), ["LOC503"] * 4)
+        self.assertEqual(loc.compare(en, "5月6日开放，6月12日结束。"), [])
+        self.assertEqual(loc.compare(en, "Dibuka 6 Mei; ditutup 12 Jun."), [])
+
+    def test_a_month_the_source_never_named_is_reported(self):
+        self.assertEqual(codes(loc.compare("Registration opens soon.", "Registration opens in March.")), ["LOC503"])
+
+    def test_links_touching_chinese_text_are_read_whole(self):
+        en = "Book at https://example.org/book, thanks."
+        for zh in ("预约https://example.org/book。", "预约：https://example.org/book，谢谢"):
+            with self.subTest(zh=zh):
+                self.assertEqual(loc.compare(en, zh), [])
 
     def test_may_the_verb_is_not_a_month(self):
         self.assertEqual(loc.compare("You may come in March.", "Boleh datang pada bulan Mac."), [])
@@ -163,6 +199,15 @@ class CreatorLintTests(unittest.TestCase):
         self.assertEqual(self.lint("subtitles", ROOT / "examples/creator-captions/example.vtt").returncode, 0)
         self.assertEqual(self.lint("subtitles", "/no/such/file.srt").returncode, 2)
         self.assertEqual(self.lint("--explain", "NOPE1").returncode, 2)
+
+
+class RoutingEvalTests(unittest.TestCase):
+    def test_a_missing_answer_is_not_none(self):
+        sys.path.insert(0, str(ROOT / "tools"))
+        import routing_eval
+        got = routing_eval.parse_answer('{"1": "social-captions", "2": "none"}', 3)
+        self.assertEqual(got, ["social-captions", None, routing_eval.MISSING])
+        self.assertEqual(routing_eval.parse_answer("no json here", 2), [routing_eval.MISSING] * 2)
 
 
 if __name__ == "__main__":

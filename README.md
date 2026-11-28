@@ -133,7 +133,7 @@ Every limit cites the page it came from and the date it was read (`--explain` pr
 
 Run on 28 November 2026 with Codex CLI 0.172.0 (gpt-6.1-sol, medium reasoning); every answer is in [`evals/routing-results.json`](evals/routing-results.json). The control matters as much as the score: with this model, the skill names alone route every request, so routing isn't where the library is weak. The eval stays as a guard. A new skill that overlaps an existing one shows up as a miss. It's a proxy for how hosts choose skills, not a recording of one.
 
-**Checkers.** 18 unit tests cover each rule, including the counting examples X, Threads and Bluesky publish (`Hello, world! 👋` is 16 on X; a family emoji is 25 on Threads and 1 on Bluesky).
+**Checkers.** 26 unit tests cover each rule, including the counting examples X, Threads and Bluesky publish (`Hello, world! 👋` is 16 on X; a family emoji is 25 on Threads and 1 on Bluesky).
 
 ## Limits
 

@@ -17,8 +17,9 @@ RULES = {
                "drops or changes. 2,500 and 2500 are the same number; full-width digits are read as digits."),
     "LOC502": ("warning", "number-added", "A number in a version that the source doesn't have: a converted price, a "
                "typo, or a detail the translator added."),
-    "LOC503": ("error", "month-mismatch", "A month in the source that a version names differently (March vs Mac vs "
-               "3月), or leaves out."),
+    "LOC503": ("error", "date-mismatch", "A month, or a day paired with its month, that differs between the source and "
+               "a version: March vs April, 6 March vs 12 March, or a month only one of them names. March, Mac and 3月 "
+               "are the same month."),
     "LOC504": ("error", "literal-changed", "A link, email address or @handle that a version drops or changes. These "
                "must be copied exactly, never translated."),
 }
@@ -30,10 +31,16 @@ for n, names in enumerate([
         "december dec dis disember 十二月"], start=1):
     for name in names.split():
         MONTHS[name] = n
-LITERAL = re.compile(r"(?i)\b(?:https?://|www\.)[^\s<>()\"'，。]+|[\w.+-]+@[\w-]+\.[\w.-]+|(?<![\w@])@[\w.]+")
+# A link may touch Chinese text on either side, so it starts after any non-ASCII-word character and stops at CJK
+# characters and punctuation (full-width punctuation is already ASCII after NFKC, and trailing marks are trimmed).
+CJK = "\u3000-\u303f\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uff00-\uffef"
+LITERAL = re.compile(rf"(?i)(?<![A-Za-z0-9])(?:https?://|www\.)[^\s<>()\"'{CJK}]+"
+                     rf"|[A-Za-z0-9.+-]+@[A-Za-z0-9-]+\.[A-Za-z0-9.-]+|(?<![A-Za-z0-9@])@[A-Za-z0-9_.]+")
 MONTH_WORD = re.compile(r"(?i)(?<![a-z])(" + "|".join(sorted((m for m in MONTHS if m.isascii()), key=len,
                                                               reverse=True)) + r")\.?(?![a-z])")
-MONTH_ZH = re.compile(r"(\d{1,2})\s*月|(十一|十二|十|[一二三四五六七八九])月")
+MONTH_ZH = re.compile(r"(\d{1,2})\s*月(?:\s*(\d{1,2})\s*[日号])?|(十一|十二|十|[一二三四五六七八九])月")
+DAY_BEFORE = re.compile(r"(\d{1,2})(?:st|nd|rd|th|hb)?\s+$", re.I)
+DAY_AFTER = re.compile(r"^\s+(\d{1,2})(?:st|nd|rd|th)?(?!\d|:)", re.I)
 NUMBER = re.compile(r"\d+(?:[,\u2009\u202f ]\d{3})*(?:\.\d+)?")
 
 
@@ -49,7 +56,8 @@ def tokens(text):
         found["literal"].append((m.group(0).rstrip(".,;:!?"), line(m.start())))
         taken.append((m.start(), m.end()))
     for m in MONTH_ZH.finditer(text):
-        found["month"].append((int(m.group(1)) if m.group(1) else MONTHS[m.group(2) + "月"], line(m.start())))
+        month = int(m.group(1)) if m.group(1) else MONTHS[m.group(3) + "月"]
+        found["month"].append((f"{month}-{int(m.group(2))}" if m.group(2) else str(month), line(m.start())))
         taken.append((m.start(), m.end()))
     for m in MONTH_WORD.finditer(text):
         word = m.group(1).lower()
@@ -57,7 +65,15 @@ def tokens(text):
             continue  # "may" the verb, "mar" the verb; a month is written with a capital in EN and BM
         if any(s <= m.start() < e for s, e in taken):
             continue
-        found["month"].append((MONTHS[word], line(m.start())))
+        lead = max(0, m.start() - 8)
+        before, after = DAY_BEFORE.search(text[lead:m.start()]), DAY_AFTER.match(text[m.end():])
+        if before:
+            taken.append((lead + before.start(1), lead + before.end(1)))
+        elif after:
+            taken.append((m.end() + after.start(1), m.end() + after.end(1)))
+        day = before or after
+        token = f"{MONTHS[word]}-{int(day.group(1))}" if day else str(MONTHS[word])
+        found["month"].append((token, line(m.start())))
     for m in NUMBER.finditer(text):
         if any(s <= m.start() < e for s, e in taken):
             continue
@@ -77,14 +93,21 @@ def compare(source, version, name="version"):
         want, have = Counter(v for v, _ in a[kind]), Counter(v for v, _ in b[kind])
         for value, count in (want - have).items():
             src_line = next(ln for v, ln in a[kind] if v == value)
-            shown = value if kind != "month" else list(MONTHS)[[*MONTHS.values()].index(value)].title()
             extra = f" ({count} of {want[value]} missing)" if want[value] > 1 else ""
-            add(missing_code, None, f"{name} lacks {shown!s} from source line {src_line}{extra}")
-        if kind == "number":
+            add(missing_code, None, f"{name} lacks {_shown(kind, value)} from source line {src_line}{extra}")
+        if kind in ("number", "month"):
             for value in (have - want):
-                add("LOC502", next(ln for v, ln in b[kind] if v == value), f"{name} has {value}, which the source "
-                    f"doesn't")
+                add("LOC502" if kind == "number" else "LOC503", next(ln for v, ln in b[kind] if v == value),
+                    f"{name} has {_shown(kind, value)}, which the source doesn't")
     return out
+
+
+def _shown(kind, value):
+    if kind != "month":
+        return value
+    month, _, day = value.partition("-")
+    name = next(n for n, v in MONTHS.items() if v == int(month)).title()
+    return f"{day} {name}" if day else name
 
 
 def report(path, findings, as_json=False):

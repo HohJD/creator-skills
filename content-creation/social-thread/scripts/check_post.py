@@ -134,7 +134,9 @@ def check(text, platform, *, thread=False, sponsored=False, disclosures=(), limi
 
 def _disclosure(text, posts, thread, extra, add):
     pattern = re.compile("|".join([DISCLOSURE.pattern[4:], *map(re.escape, extra)]), re.I) if extra else DISCLOSURE
-    hits = list(pattern.finditer(text))
+    # Links, handles and emails aren't read as words: "ad" in a URL or @sponsoredlamp discloses nothing.
+    readable = re.sub(r"\S*@\S+|" + URL.pattern[4:], lambda m: " " * len(m.group(0)), text, flags=re.I)
+    hits = list(pattern.finditer(readable))
     if not hits:
         add("DIS601", 1, "sponsored, but no disclosure (ad, sponsored, iklan, 广告…) found")
         return
