@@ -1,6 +1,6 @@
 ---
 name: hook-lab
-description: Rewrite the first one to three seconds or first line of a video, Short or post into five testable hooks, each using a different opening move and matched with the first frame, on-screen text and spoken line, then pick one to test. Use when someone asks for stronger hooks, a better opening, a cold open or why viewers drop off at the start. Not for full scripts (scriptcraft) or titles and thumbnails (title-thumbnail).
+description: Rewrite the first one to three seconds or first line of a video, Short or post into five testable hooks, each using a different opening move and matched with the first frame, on-screen text and spoken line, then pick one to test. Use when someone asks for stronger hooks, a better opening, a cold open or why viewers drop off at the start. Not for full scripts or tidying lines you already have (scriptcraft), or titles and thumbnails (title-thumbnail).
 license: Apache-2.0
 ---
 
