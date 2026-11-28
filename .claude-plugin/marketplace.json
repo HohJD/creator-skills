@@ -9,7 +9,7 @@
     {
       "name": "creator-skills",
       "source": "./",
-      "description": "30 creator skills for Claude Code, with offline checkers for platform limits, subtitle timing and sponsor disclosures."
+      "description": "34 creator skills for Claude Code, with offline checkers for platform limits, subtitle timing and sponsor disclosures."
     }
   ]
 }

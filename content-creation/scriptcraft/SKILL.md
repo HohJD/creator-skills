@@ -1,6 +1,6 @@
 ---
 name: scriptcraft
-description: Write, edit or review the spoken words for a creator video, including voiceovers, talking-head takes, screencast tutorials, product demos, sponsored reads and Mandarin or bilingual scripts. Use when someone says tidy or humanise this take, write the voiceover, make this a 30-second Reel script, check my script before I record, or learn my speaking style. Keeps the creator's own lines, fits the words to the footage and flags claims that need proof. Not for post captions (social-captions), timed subtitle files (subtitle-editor) or shot lists (shoot-plan).
+description: Write, edit or review the spoken words for a creator video, including voiceovers, talking-head takes, screencast tutorials, product demos, sponsored reads and Mandarin or bilingual scripts. Use when someone says tidy or humanise this take, write the voiceover, make this a 30-second Reel script, check my script before I record, or learn my speaking style. Keeps the creator's own lines, fits the words to the footage and flags claims that need proof. Not for post captions (social-captions), timed subtitle files (subtitle-editor), shot lists (shoot-plan) or five alternative openings to test (hook-lab).
 license: Apache-2.0
 ---
 

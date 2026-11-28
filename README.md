@@ -6,7 +6,7 @@ By [AI Talent Labs](https://www.ai-talentlabs.com) · [Browse the skills](https:
 
 [![CI](https://github.com/AI-Talentlabs/creator-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/AI-Talentlabs/creator-skills/actions/workflows/ci.yml)
 
-CreatorSkills is a library of 30 skills for creators who write, film, edit and publish with Codex or Claude Code. Bring the material you actually have: a rough take, two photos, a transcript, a sponsor brief or a small set of analytics. Five of the skills ship offline checkers, so platform limits, subtitle timing and sponsor disclosures are counted, not guessed.
+CreatorSkills is a library of 34 skills for creators who write, film, edit and publish with Codex or Claude Code. Bring the material you actually have: a rough take, two photos, a transcript, a sponsor brief or a small set of analytics. Five of the skills ship offline checkers, so platform limits, subtitle timing and sponsor disclosures are counted, not guessed.
 
 **Start here:** [ScriptCraft](content-creation/scriptcraft/SKILL.md) for what you say on camera, [CarouselCraft](content-creation/carouselcraft/SKILL.md) for swipe posts, [Social captions](content-creation/social-captions/SKILL.md) for the words under them.
 
@@ -29,6 +29,7 @@ CreatorSkills is a library of 30 skills for creators who write, film, edit and p
 | Film and edit | [Shot list and B-roll](content-creation/shoot-plan/SKILL.md) · [Clip selection](content-creation/clip-selects/SKILL.md) · [Subtitle editor](content-creation/subtitle-editor/SKILL.md) |
 | Publish and adapt | [Social captions](content-creation/social-captions/SKILL.md) · [Image descriptions](content-creation/image-descriptions/SKILL.md) · [Creator newsletter](content-creation/newsletter-editor/SKILL.md) · [Podcast show notes](content-creation/podcast-notes/SKILL.md) · [Content repurposing](content-creation/content-repurpose/SKILL.md) · [Localization](content-creation/content-localization/SKILL.md) |
 | After publication | [Community replies](content-creation/community-replies/SKILL.md) · [Creator analytics](content-creation/creator-analytics/SKILL.md) |
+| Grow the channel | [Creator benchmark](content-creation/creator-benchmark/SKILL.md) · [Hook lab](content-creation/hook-lab/SKILL.md) · [Collab pitch](content-creation/collab-pitch/SKILL.md) · [Rate card](content-creation/rate-card/SKILL.md) |
 
 ### More creator workflows
 
@@ -45,7 +46,7 @@ CreatorSkills is a library of 30 skills for creators who write, film, edit and p
 
 ## Install
 
-**Claude Code plugin** (Claude Code 2.1.275 or later), all 30 skills in one step:
+**Claude Code plugin** (Claude Code 2.1.275 or later), all 34 skills in one step:
 
 ```text
 /plugin install creator-skills --marketplace AI-Talentlabs/creator-skills
@@ -123,7 +124,7 @@ Every limit cites the page it came from and the date it was read (`--explain` pr
 
 ## Results
 
-**Routing.** [`evals/routing.json`](evals/routing.json) holds 89 requests: 35 that should use a particular skill (at least one per skill), 30 nearby requests, one per skill, that should go to a named sibling or to no skill, and 24 hard requests worded so the skill names alone point the wrong way. [`tools/routing_eval.py`](tools/routing_eval.py) gives a model every skill's name and description and asks it to pick one skill or none per request.
+**Routing.** [`evals/routing.json`](evals/routing.json) holds 97 requests: 39 that should use a particular skill (at least one per skill), 34 nearby requests, one per skill, that should go to a named sibling or to no skill, and 24 hard requests worded so the skill names alone point the wrong way. [`tools/routing_eval.py`](tools/routing_eval.py) gives a model every skill's name and description and asks it to pick one skill or none per request.
 
 | Requests | With descriptions | Names only (control) |
 | --- | --- | --- |
@@ -131,7 +132,7 @@ Every limit cites the page it came from and the date it was read (`--explain` pr
 | Should go elsewhere | 30/30 | 30/30 |
 | Hard (names mislead) | 24/24 | 24/24 |
 
-Run on 28 November 2026 with Codex CLI 0.172.0 (gpt-6.1-sol, medium reasoning); every answer is in [`evals/routing-results.json`](evals/routing-results.json). The control matters as much as the score: with this model, the skill names alone route every request, so routing isn't where the library is weak. The eval stays as a guard. A new skill that overlaps an existing one shows up as a miss. It's a proxy for how hosts choose skills, not a recording of one.
+The table covers the first 89 requests; the 8 for Creator benchmark, Hook lab, Collab pitch and Rate card were added after the run and are not scored yet. Run on 28 November 2026 with Codex CLI 0.172.0 (gpt-6.1-sol, medium reasoning); every answer is in [`evals/routing-results.json`](evals/routing-results.json). The control matters as much as the score: with this model, the skill names alone route every request, so routing isn't where the library is weak. The eval stays as a guard. A new skill that overlaps an existing one shows up as a miss. It's a proxy for how hosts choose skills, not a recording of one.
 
 **Checkers.** 26 unit tests cover each rule, including the counting examples X, Threads and Bluesky publish (`Hello, world! 👋` is 16 on X; a family emoji is 25 on Threads and 1 on Bluesky).
 

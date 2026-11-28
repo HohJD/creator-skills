@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added four growth skills: Creator benchmark, Hook lab, Collab pitch and Rate card, with routing probes and prompts.
+
 ## 0.4.0 — 2026-11-28
 
 - Added offline checkers to five skills, with rule codes, sources and dates: `lint_captions.py` (subtitle-editor: unreadable, empty, out-of-order and overlapping cues; Netflix English line, duration and reading-speed limits), `check_post.py` (social-captions and social-thread: Instagram, Threads, Bluesky and X limits counted as each platform publishes, Instagram hashtag and @ tag caps, sponsor disclosure present, early and outside the hashtags), `check_alt.py` (image-descriptions) and `compare_versions.py` (content-localization: numbers, months, links and handles across versions).

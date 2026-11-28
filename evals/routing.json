@@ -1,5 +1,5 @@
 {
- "about": "Routing cases: one request per skill that should use it, and one nearby request that should go to the named sibling, or to no skill (expect null) because none of them does that job. Prompts for 28 skills come from docs/CREATOR-PROBES.md, the carousel, ScriptCraft and off-topic probes from docs/QUALITY-EVALS.md, with placeholders filled in by invented details. Labels are the maintainers' judgement; open an issue if you disagree with one. Hard cases are worded so that a router reading only skill names would likely pick `trap`; they measure whether the descriptions do their job.",
+ "about": "Routing cases: one request per skill that should use it, and one nearby request that should go to the named sibling, or to no skill (expect null) because none of them does that job. Prompts for 32 skills come from docs/CREATOR-PROBES.md, the carousel, ScriptCraft and off-topic probes from docs/QUALITY-EVALS.md, with placeholders filled in by invented details. Labels are the maintainers' judgement; open an issue if you disagree with one. Hard cases are worded so that a router reading only skill names would likely pick `trap`; they measure whether the descriptions do their job.",
  "cases": [
   {
    "prompt": "Write a behind-the-scenes post caption for these wheel-throwing photos. Keep my phrase 'the thumb dent'.",
@@ -558,6 +558,54 @@
    "case": "hard",
    "skill": "content-planner",
    "trap": "content-planner"
+  },
+  {
+   "prompt": "I have 4,000 followers and @potterbee has 60,000. How fast would I need to grow to catch her in 18 months?",
+   "expect": "creator-benchmark",
+   "case": "positive",
+   "skill": "creator-benchmark"
+  },
+  {
+   "prompt": "Review my own last month of views and saves.",
+   "expect": "creator-analytics",
+   "case": "boundary",
+   "skill": "creator-benchmark"
+  },
+  {
+   "prompt": "Give me five stronger openings for this Short; people drop off in the first two seconds.",
+   "expect": "hook-lab",
+   "case": "positive",
+   "skill": "hook-lab"
+  },
+  {
+   "prompt": "Write the full 60-second script for this tutorial.",
+   "expect": "scriptcraft",
+   "case": "boundary",
+   "skill": "hook-lab"
+  },
+  {
+   "prompt": "Find three potters I could make a joint video with and write the DM.",
+   "expect": "collab-pitch",
+   "case": "positive",
+   "skill": "collab-pitch"
+  },
+  {
+   "prompt": "Pitch my channel to a glaze brand for a sponsorship.",
+   "expect": "creator-media-kit",
+   "case": "boundary",
+   "skill": "collab-pitch"
+  },
+  {
+   "prompt": "A brand asked what I charge for one Reel plus three Stories. Price it from my typical views.",
+   "expect": "rate-card",
+   "case": "positive",
+   "skill": "rate-card"
+  },
+  {
+   "prompt": "Make the one-sheet I send to sponsors.",
+   "expect": "creator-media-kit",
+   "case": "boundary",
+   "skill": "rate-card"
   }
  ]
 }
