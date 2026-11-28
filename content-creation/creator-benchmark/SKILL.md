@@ -13,7 +13,8 @@ Collect only numbers the creator supplies or can read publicly, each with platfo
 Work out the plan:
 - Gap: target followers minus current followers.
 - Required monthly growth: (target / current)^(1 / months) − 1.
-- Time at current pace: log(target / current) / log(1 + current monthly growth). Say "not measurable" without two dated follower snapshots at least 28 days apart.
+- Time at current pace: log(target / current) / log(1 + current monthly growth). Say "not measurable" without two dated follower snapshots at least 28 days apart. When the pace is zero or negative, say the target is not reachable at the current pace instead of calculating a time.
+- With zero current followers, skip both formulas and set a first milestone, such as 100 followers, to measure from.
 
 Then study the target's 10 most recent standout posts. Record topic, format, length, opening, packaging and posting day. Separate what you observed from what you infer. Paid promotion, an older platform era, a team or a viral outlier can explain a gap that you cannot copy.
 
