@@ -17,7 +17,7 @@ Write five hooks. Each uses a different move from this list, and only when the c
 
 When a move has nothing real behind it, such as no myth to correct or no number, skip it, write a second variant of a supported move and say which move you skipped.
 
-For each hook give three lines that land in the first one to three seconds: first frame, on-screen text (eight words or fewer) and the spoken line. Keep the creator's voice and any phrase they asked to keep. Do not open with a greeting, a channel intro or "in this video".
+For each hook give three lines that land in the first one to three seconds: first frame, on-screen text (eight words or fewer) and the spoken line. For a text-only post, give the paste-ready opening line instead. Keep the creator's voice and any phrase they asked to keep. Do not open with a greeting, a channel intro or "in this video".
 
 When retention data is supplied, use the share of viewers still watching at around 30 seconds and any early dip to say which move to test first. Without data, recommend the move that best fits the payoff. Suggest testing one hook against the current opening on comparable posts, changing nothing else.
 
