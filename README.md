@@ -6,7 +6,7 @@ By [AI Talent Labs](https://www.ai-talentlabs.com) · [Browse the skills](https:
 
 [![CI](https://github.com/AI-Talentlabs/creator-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/AI-Talentlabs/creator-skills/actions/workflows/ci.yml)
 
-CreatorSkills is a library of 30 skills for creators who write, film, edit and publish with Codex or Claude Code. Bring the material you actually have: a rough take, two photos, a transcript, a sponsor brief or a small set of analytics.
+CreatorSkills is a library of 34 skills for creators who write, film, edit and publish with Codex or Claude Code. Bring the material you actually have: a rough take, two photos, a transcript, a sponsor brief or a small set of analytics.
 
 ### Which caption do you need?
 
@@ -25,6 +25,7 @@ CreatorSkills is a library of 30 skills for creators who write, film, edit and p
 | Film and edit | [Shot list and B-roll](content-creation/shoot-plan/SKILL.md) · [Clip selection](content-creation/clip-selects/SKILL.md) · [Subtitle editor](content-creation/subtitle-editor/SKILL.md) |
 | Publish and adapt | [Social captions](content-creation/social-captions/SKILL.md) · [Image descriptions](content-creation/image-descriptions/SKILL.md) · [Creator newsletter](content-creation/newsletter-editor/SKILL.md) · [Podcast show notes](content-creation/podcast-notes/SKILL.md) · [Content repurposing](content-creation/content-repurpose/SKILL.md) · [Localization](content-creation/content-localization/SKILL.md) |
 | After publication | [Community replies](content-creation/community-replies/SKILL.md) · [Creator analytics](content-creation/creator-analytics/SKILL.md) |
+| Grow the channel | [Creator benchmark](content-creation/creator-benchmark/SKILL.md) · [Hook lab](content-creation/hook-lab/SKILL.md) · [Collab pitch](content-creation/collab-pitch/SKILL.md) · [Rate card](content-creation/rate-card/SKILL.md) |
 
 ### More creator workflows
 

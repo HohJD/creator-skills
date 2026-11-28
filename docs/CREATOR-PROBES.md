@@ -26,6 +26,10 @@ Use each request in a fresh session with the installed skills. The left request 
 | --- | --- | --- |
 | `audience-listening` | Use [comments or queries] from [channel/window] to find three reader needs. Show which items support each, a counterexample where relevant, and one piece we can make next. | Reply individually to two customer comments. |
 | `creator-media-kit` | Build a one-page media kit for [partner type] using [work, metrics and dates]. Lead with why my work fits. Separate confirmed offers from ideas and flag missing contact details outside the copy. | Calculate retention or performance from raw post analytics. |
+| `creator-benchmark` | How do I grow into this creator with 40,000 followers in 12 months? Here are my numbers and theirs. | Review last month's results for my own channel. |
+| `hook-lab` | Give me five stronger openings for this 40-second Short. | Write the full script for this Short. |
+| `collab-pitch` | Write a DM pitching a joint video to this ceramics creator. | Write a pitch sheet for a stationery brand. |
+| `rate-card` | What should I charge a brand for one Short and two Stories? Here are my views and hours. | Build a one-page media kit for brands. |
 | `campaign-brief` | Make a one-page UGC brief from [campaign notes]. Separate mandatory copy from choices I can make. List the shots that establish each claim, delivery specs and unresolved approvals. | Independently verify a single product claim using supplied evidence. |
 | `search-article` | Write [article or brief] for someone searching [question]. Use [original observations/sources]. Answer the question early, show what the reader can verify, and keep unsupported product claims out. | Refresh only the two stale lines in an existing post. |
 | `content-refresh` | Refresh [old page] using [release note or corrected evidence]. Give me paste-ready replacements, every affected placement and a short change note if the substance changed. | Write a new article from a blank brief. |

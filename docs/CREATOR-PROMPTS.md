@@ -243,3 +243,35 @@ Codex `$campaign-links` · Claude Code `/campaign-links`
 > Build campaign links to [approved URL] for [placements]. Use [existing source/medium naming scheme], campaign [name] and one content label per creative. Preserve existing query values and the page anchor.
 
 [Worked example and source](../content-creation/campaign-links/SKILL.md#worked-example)
+
+### Target creator benchmark
+
+Codex `$creator-benchmark` · Claude Code `/creator-benchmark`
+
+> Benchmark my [platform] channel ([followers on date], [median views], [posts per week]) against [target] ([their dated numbers]). Show the gap, the monthly growth I need for [months] and my time at current pace, then give me three one-variable experiments.
+
+[Worked example and source](../content-creation/creator-benchmark/SKILL.md#worked-example)
+
+### Hook lab
+
+Codex `$hook-lab` · Claude Code `/hook-lab`
+
+> Here's my [video/post] and its current opening. Give me five hooks with different opening moves, each with first frame, on-screen text and spoken line. Every hook must be paid off later. Tell me which to test first and why.
+
+[Worked example and source](../content-creation/hook-lab/SKILL.md#worked-example)
+
+### Collab pitch
+
+Codex `$collab-pitch` · Claude Code `/collab-pitch`
+
+> Here are [candidates and links] and my channel [niche, size, recent work]. Score their fit, pick the best two, give each a concrete collab idea and write a DM under 120 words plus one follow-up.
+
+[Worked example and source](../content-creation/collab-pitch/SKILL.md#worked-example)
+
+### Sponsorship rate card
+
+Codex `$rate-card` · Claude Code `/rate-card`
+
+> Build my rate card from [median views per format, with dates], [hours per deliverable], my rate of [amount] per 1,000 views and [hourly rate]. Price usage, exclusivity, rush and revisions separately and suggest three packages.
+
+[Worked example and source](../content-creation/rate-card/SKILL.md#worked-example)

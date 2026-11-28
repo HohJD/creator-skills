@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added four growth skills: Creator benchmark, Hook lab, Collab pitch and Rate card, with routing probes and prompts.
+
 - Rewrote all 30 skill descriptions to state when each skill should fire and which sibling handles near-miss requests. Lint now requires a "Use when" clause, YAML-safe descriptions and valid sibling references.
 
 - Sharpened ScriptCraft with a job picker, a default output shape, pacing rules for English and Mandarin, an invented edit example and a pre-handover check. Cleaned up the sponsor, bilingual, longform and rubric references.
