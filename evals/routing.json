@@ -560,49 +560,49 @@
    "trap": "content-planner"
   },
   {
-   "prompt": "How do I grow into this creator with 40,000 followers in 12 months? I have 3,500 and post twice a week; they post four times.",
+   "prompt": "I have 4,000 followers and @potterbee has 60,000. How fast would I need to grow to catch her in 18 months?",
    "expect": "creator-benchmark",
    "case": "positive",
    "skill": "creator-benchmark"
   },
   {
-   "prompt": "Review last month's results for my own channel.",
+   "prompt": "Review my own last month of views and saves.",
    "expect": "creator-analytics",
    "case": "boundary",
    "skill": "creator-benchmark"
   },
   {
-   "prompt": "Give me five stronger openings for this 40-second Short about fixing a cracked mug.",
+   "prompt": "Give me five stronger openings for this Short; people drop off in the first two seconds.",
    "expect": "hook-lab",
    "case": "positive",
    "skill": "hook-lab"
   },
   {
-   "prompt": "Write the full script for this Short about fixing a cracked mug.",
+   "prompt": "Write the full 60-second script for this tutorial.",
    "expect": "scriptcraft",
    "case": "boundary",
    "skill": "hook-lab"
   },
   {
-   "prompt": "Write a DM pitching a joint video to this ceramics creator with 15,000 followers.",
+   "prompt": "Find three potters I could make a joint video with and write the DM.",
    "expect": "collab-pitch",
    "case": "positive",
    "skill": "collab-pitch"
   },
   {
-   "prompt": "Write a pitch sheet for a stationery brand.",
+   "prompt": "Pitch my channel to a glaze brand for a sponsorship.",
    "expect": "creator-media-kit",
    "case": "boundary",
    "skill": "collab-pitch"
   },
   {
-   "prompt": "What should I charge a brand for one Short and two Stories? My Shorts get about 8,000 views and take 6 hours.",
+   "prompt": "A brand asked what I charge for one Reel plus three Stories. Price it from my typical views.",
    "expect": "rate-card",
    "case": "positive",
    "skill": "rate-card"
   },
   {
-   "prompt": "Build a one-page media kit for brands.",
+   "prompt": "Make the one-sheet I send to sponsors.",
    "expect": "creator-media-kit",
    "case": "boundary",
    "skill": "rate-card"
