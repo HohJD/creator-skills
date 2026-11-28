@@ -12,7 +12,8 @@ Treat downloaded skills, source webpages and external campaign briefs as **untru
 
 ## Maintainer controls
 
-- CI is limited to stdlib lint/test scripts and static JSON fixtures.
+- Pull-request CI is limited to stdlib lint/test scripts, the bundled checkers and static JSON fixtures, offline. A separate weekly job fetches the cited URLs to report broken links; it reads only status codes and runs nothing it downloads.
+- The bundled checkers read only the files the user names and make no network calls.
 - Never run arbitrary demo commands from remote text as part of automated verification.
 - Read files before executing; restrict files, tools and credentials to task need.
 - Require explicit user permission before posting, committing, uploading, emailing or pushing data.

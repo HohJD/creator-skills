@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 0.4.0 — 2026-11-28
+
+- Added offline checkers to five skills, with rule codes, sources and dates: `lint_captions.py` (subtitle-editor: unreadable, empty, out-of-order and overlapping cues; Netflix English line, duration and reading-speed limits), `check_post.py` (social-captions and social-thread: Instagram, Threads, Bluesky and X limits counted as each platform publishes, Instagram hashtag and @ tag caps, sponsor disclosure present, early and outside the hashtags), `check_alt.py` (image-descriptions) and `compare_versions.py` (content-localization: numbers, months, links and handles across versions).
+- Added `tools/creator_lint.py`, one CLI for all checkers with `--list-rules`, `--explain`, `--select`, `--ignore`, `--strict` and `--json`.
+- Added a routing eval: 89 labelled requests in `evals/routing.json`, an offline completeness check in CI, and a model run with a names-only control. First run: 89/89 with descriptions and 89/89 with names only (Codex CLI 0.172.0).
+- Installable as a Claude Code plugin (`/plugin install creator-skills --marketplace AI-Talentlabs/creator-skills`) and with the skills CLI (`npx skills add AI-Talentlabs/creator-skills`).
+- Added issue and pull request templates, a weekly link check, Python 3.10 in CI, and README sections on checks, results and limits. Fixed the broken link to Guo, Kim and Rubin (2014).
+
+## 0.3.0 — 2026-11-25
+
 - Rewrote all 30 skill descriptions to state when each skill should fire and which sibling handles near-miss requests. Lint now requires a "Use when" clause, YAML-safe descriptions and valid sibling references.
 
 - Sharpened ScriptCraft with a job picker, a default output shape, pacing rules for English and Mandarin, an invented edit example and a pre-handover check. Cleaned up the sponsor, bilingual, longform and rubric references.

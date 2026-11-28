@@ -49,6 +49,22 @@ class HostInstallations(unittest.TestCase):
                     ], cwd=project, text=True)
                     self.assertEqual(url.strip(), "https://example.org/?utm_source=studio"
                                      "&utm_medium=email&utm_campaign=launch#note")
+                    (project / "track.vtt").write_text(track, encoding="utf-8")
+                    (project / "caption.txt").write_text("Nice lamp.\n", encoding="utf-8")
+                    (project / "alts.txt").write_text("A blue mug with a thumb dent.\n", encoding="utf-8")
+                    (project / "en.txt").write_text("RM25 on 6 March\n", encoding="utf-8")
+                    (project / "ms.txt").write_text("RM25 pada 6 Mac\n", encoding="utf-8")
+                    for script, args, code in (
+                        ("subtitle-editor/scripts/lint_captions.py", ["track.vtt"], 0),
+                        ("social-captions/scripts/check_post.py", ["caption.txt", "--platform", "x"], 0),
+                        ("social-thread/scripts/check_post.py",
+                         ["caption.txt", "--platform", "threads", "--thread", "--sponsored"], 1),
+                        ("image-descriptions/scripts/check_alt.py", ["alts.txt"], 0),
+                        ("content-localization/scripts/compare_versions.py", ["en.txt", "ms.txt"], 0),
+                    ):
+                        done = subprocess.run([sys.executable, installed / script, *args], cwd=project,
+                                              capture_output=True, text=True)
+                        self.assertEqual(done.returncode, code, (script, done.stdout, done.stderr))
 
     def test_updated_skill_has_only_one_discoverable_copy(self):
         for agent in ("codex", "claude"):

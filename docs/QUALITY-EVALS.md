@@ -4,6 +4,10 @@ We evaluate **routing** and **execution quality** separately. Running the suppli
 
 The expanded [creator trials](CREATOR-TRIALS.md) and [routing probes](CREATOR-PROBES.md) cover the additional skills.
 
+## Automated routing eval
+
+`evals/routing.json` turns the probes below and in [CREATOR-PROBES](CREATOR-PROBES.md) into 89 labelled requests. `python3 tools/routing_eval.py --check` validates them in CI; `--run codex` gives a model every skill's name and description, asks it to route each request, and repeats the run with the descriptions hidden as a control. Results, with the host, model and date, are in `evals/routing-results.json` and the README. The run measures descriptions, not a host's live skill loading, so keep the manual probes below for release checks.
+
 ## Routing probes, manually in fresh Claude Code / Codex sessions
 
 | Test | Target | Expected |
