@@ -14,7 +14,7 @@ This repository operationalizes **learning principles** and **editable editorial
 | [Cognitive load review](https://pmc.ncbi.nlm.nih.gov/articles/PMC7940870/) | signalling, reducing irrelevant load, segmenting instruction | Review article, education contexts |
 | [Worked examples / cognitive architecture](https://doi.org/10.1007/s10648-019-09465-5) | novice guidance, step-wise progression, expertise differences | Research synthesis; audience-specific |
 | [Effective educational videos](https://pmc.ncbi.nlm.nih.gov/articles/PMC5132380/) | conversational narration; learning aligned visuals; segmentation | Educational-video review |
-| [Guo, Kim & Rubin MOOC engagement](https://juhokim.com/files/LAS2014-Engagement.pdf) | production decisions affect observed video engagement | Large observational MOOC study, not a 6-min rule or virality guarantee |
+| [Guo, Kim & Rubin MOOC engagement](https://doi.org/10.1145/2556325.2566239) | production decisions affect observed video engagement | Large observational MOOC study, not a 6-min rule or virality guarantee |
 | [Psychology of curiosity](https://doi.org/10.1037/0033-2909.116.1.75) | curiosity involves noticed information gaps | Theory; hook application is editorial extrapolation |
 | [WCAG 2.2](https://www.w3.org/TR/wcag/) | accessible captions for prerecorded synchronized media | Accessibility standard; platform contexts vary |
 | [YouTube retention guidance](https://support.google.com/youtube/answer/9314415?hl=en) | inspect moments of retention, spikes and dips carefully | Analytics documentation; retention != learning |

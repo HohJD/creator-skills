@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and ideas
+    url: https://github.com/AI-Talentlabs/creator-skills/discussions
+    about: Ask how to use a skill, or float an idea before writing it up.
+  - name: Security issue
+    url: https://github.com/AI-Talentlabs/creator-skills/blob/main/SECURITY.md
+    about: Report privately, not in a public issue.

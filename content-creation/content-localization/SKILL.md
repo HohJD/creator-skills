@@ -12,6 +12,8 @@ Mark strings that must remain literal: names, promo codes, commands, interface l
 
 Deliver in the requested format: local-language copy only, parallel columns or per-card text. For speech, give the line a spoken rhythm in the target language and leave space to perform the recorded action. For a bilingual card, make each language legible and check that the same action or fact appears in each. For a timestamped subtitle file, use the subtitle-editing workflow. Flag a term outside publishable copy when the product screenshot or approved translation is missing.
 
+Before delivering, save the source and each version as files and run the bundled `scripts/compare_versions.py`, resolved beside this installed SKILL.md: `python3 "/path/to/content-localization/scripts/compare_versions.py" source.txt ms.txt zh.txt`. It reports any price, number, month, link, email or @handle that a version drops, changes or adds. Fix real mismatches; when a difference is intended (a discount written as 八折 instead of 20%, a number spelled out), say so in your note instead of forcing the digits to match.
+
 ## Try it
 
 > Adapt [copy] for [audience/language]. Keep the exact screen labels [labels] and preserve [qualifier]. Give me final copy and a short note on any term that still needs checking.

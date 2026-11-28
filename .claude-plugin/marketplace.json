@@ -1,0 +1,15 @@
+{
+  "name": "ai-talentlabs",
+  "description": "Open-source skills and tools for creators, from AI Talent Labs.",
+  "owner": {
+    "name": "AI Talent Labs",
+    "url": "https://www.ai-talentlabs.com"
+  },
+  "plugins": [
+    {
+      "name": "creator-skills",
+      "source": "./",
+      "description": "30 creator skills for Claude Code, with offline checkers for platform limits, subtitle timing and sponsor disclosures."
+    }
+  ]
+}
