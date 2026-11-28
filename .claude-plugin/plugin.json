@@ -1,0 +1,14 @@
+{
+  "name": "creator-skills",
+  "description": "34 skills for creators who write, film, edit and publish: scripts, carousels, captions, subtitles, alt text, localization, sponsor briefs and more, with offline checkers for platform limits, subtitle timing and sponsor disclosures.",
+  "version": "0.4.0",
+  "author": {
+    "name": "AI Talent Labs",
+    "url": "https://www.ai-talentlabs.com"
+  },
+  "homepage": "https://www.ai-talentlabs.com/open-source/creator-skills",
+  "repository": "https://github.com/AI-Talentlabs/creator-skills",
+  "license": "Apache-2.0",
+  "keywords": ["content-creation", "creators", "video", "captions", "subtitles", "writing"],
+  "skills": ["./content-creation/"]
+}

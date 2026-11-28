@@ -10,6 +10,8 @@ State who the thread is for and what the first post can deliver immediately. Bre
 
 Deliver paste-ready posts in order, with numbering only when useful or requested. Keep links and exact handles provided by the creator. Respect the user's length limit. For platform-weighted limits, rely on a suitable counter or identify that a count is only a plain-character estimate. A thread can end when the reader has the answer.
 
+To check the finished thread, save it with a line containing only `---` between posts and run the bundled `scripts/check_post.py`, resolved beside this installed SKILL.md: `python3 "/path/to/social-thread/scripts/check_post.py" thread.txt --platform x --thread`. Use `threads` or `bluesky` for those platforms, and add `--sponsored` for a paid thread, which must disclose in the first post. It uses each platform's published counting rule, so report its numbers rather than a plain character estimate.
+
 ## Copyable brief
 
 > Turn [source note] into [number] text posts. Lead with the result, keep the sample limits near it, and give each post a useful job. No sales CTA.
@@ -25,3 +27,5 @@ Deliver paste-ready posts in order, with numbering only when useful or requested
 ## Source
 
 X documents how connected posts work and how a single post from a thread can be shared on its own. [Read the source](https://help.x.com/en/using-x/create-a-thread).
+
+The checker counts X posts by its [published weighting](https://docs.x.com/fundamentals/counting-characters), Threads posts by the [500-character limit](https://developers.facebook.com/docs/threads/overview) with emoji as bytes, and Bluesky posts by the [lexicon's 300 graphemes](https://github.com/bluesky-social/atproto/blob/main/packages/api/lexicons/app/bsky/feed/post.json), all read 28 November 2026.

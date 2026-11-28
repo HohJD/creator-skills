@@ -1,0 +1,18 @@
+name: Broken link or out-of-date source
+description: A cited page moved, or a platform changed a limit the skills rely on.
+labels: ["documentation", "sources"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: File and line
+      placeholder: content-creation/social-thread/SKILL.md
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What changed
+      description: The new URL or limit, and where you saw it (with the date).
+    validations:
+      required: true

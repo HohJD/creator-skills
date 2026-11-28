@@ -1,0 +1,37 @@
+name: Propose a skill or a skill change
+description: A creator job the library doesn't handle, or handles badly.
+labels: ["new-skill"]
+body:
+  - type: textarea
+    id: who
+    attributes:
+      label: Who benefits
+      description: The creator and the job, e.g. "a podcaster turning a 40-minute episode into show notes".
+    validations:
+      required: true
+  - type: textarea
+    id: today
+    attributes:
+      label: What breaks today
+      description: What happens with the current skills. Paste the prompt you used and what came back.
+    validations:
+      required: true
+  - type: textarea
+    id: evaluate
+    attributes:
+      label: How we can tell it works
+      description: One request that should use the skill and one nearby request that shouldn't, plus anything that can be checked exactly (a length, a format, a required line).
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Platform docs, style guides or studies the guidance rests on, with dates.
+  - type: checkboxes
+    id: private
+    attributes:
+      label: Material
+      options:
+        - label: I haven't included unpublished scripts, private briefs, personal data or third-party transcripts without consent.
+          required: true

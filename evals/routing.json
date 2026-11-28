@@ -1,0 +1,611 @@
+{
+ "about": "Routing cases: one request per skill that should use it, and one nearby request that should go to the named sibling, or to no skill (expect null) because none of them does that job. Prompts for 32 skills come from docs/CREATOR-PROBES.md, the carousel, ScriptCraft and off-topic probes from docs/QUALITY-EVALS.md, with placeholders filled in by invented details. Labels are the maintainers' judgement; open an issue if you disagree with one. Hard cases are worded so that a router reading only skill names would likely pick `trap`; they measure whether the descriptions do their job.",
+ "cases": [
+  {
+   "prompt": "Write a behind-the-scenes post caption for these wheel-throwing photos. Keep my phrase 'the thumb dent'.",
+   "expect": "social-captions",
+   "case": "positive",
+   "skill": "social-captions"
+  },
+  {
+   "prompt": "Turn this timed dialogue into subtitles.",
+   "expect": "subtitle-editor",
+   "case": "boundary",
+   "skill": "social-captions"
+  },
+  {
+   "prompt": "Convert these two verified millisecond intervals into SubRip cues.",
+   "expect": "subtitle-editor",
+   "case": "positive",
+   "skill": "subtitle-editor"
+  },
+  {
+   "prompt": "Write the caption below this Instagram photo.",
+   "expect": "social-captions",
+   "case": "boundary",
+   "skill": "subtitle-editor"
+  },
+  {
+   "prompt": "Give each of these carousel cards an accessible text alternative.",
+   "expect": "image-descriptions",
+   "case": "positive",
+   "skill": "image-descriptions"
+  },
+  {
+   "prompt": "Write a promotional caption under this photo.",
+   "expect": "social-captions",
+   "case": "boundary",
+   "skill": "image-descriptions"
+  },
+  {
+   "prompt": "Give me thumbnail concepts paired with YouTube titles for the clip.",
+   "expect": "title-thumbnail",
+   "case": "positive",
+   "skill": "title-thumbnail"
+  },
+  {
+   "prompt": "Give me email subject lines and preheaders.",
+   "expect": "newsletter-editor",
+   "case": "boundary",
+   "skill": "title-thumbnail"
+  },
+  {
+   "prompt": "Plan B-roll for a one-take unboxing with one camera and no spare box.",
+   "expect": "shoot-plan",
+   "case": "positive",
+   "skill": "shoot-plan"
+  },
+  {
+   "prompt": "Rewrite just the spoken narration.",
+   "expect": "scriptcraft",
+   "case": "boundary",
+   "skill": "shoot-plan"
+  },
+  {
+   "prompt": "Prepare an eight-minute guest interview on repairing a bell.",
+   "expect": "interview-guide",
+   "case": "positive",
+   "skill": "interview-guide"
+  },
+  {
+   "prompt": "Write show notes from an already recorded episode.",
+   "expect": "podcast-notes",
+   "case": "boundary",
+   "skill": "interview-guide"
+  },
+  {
+   "prompt": "Draft an issue about the two tiles, including subject and preheader.",
+   "expect": "newsletter-editor",
+   "case": "positive",
+   "skill": "newsletter-editor"
+  },
+  {
+   "prompt": "Write a title and thumbnail pair for a YouTube upload.",
+   "expect": "title-thumbnail",
+   "case": "boundary",
+   "skill": "newsletter-editor"
+  },
+  {
+   "prompt": "Plan a week of posts around a two-hour production budget.",
+   "expect": "content-planner",
+   "case": "positive",
+   "skill": "content-planner"
+  },
+  {
+   "prompt": "Schedule these posts in my account at the listed times.",
+   "expect": null,
+   "case": "boundary",
+   "skill": "content-planner"
+  },
+  {
+   "prompt": "Turn this sourced interview paragraph into an email opener and a post, keeping the caveat in each.",
+   "expect": "content-repurpose",
+   "case": "positive",
+   "skill": "content-repurpose"
+  },
+  {
+   "prompt": "Transcribe an interview whose audio has not been supplied.",
+   "expect": null,
+   "case": "boundary",
+   "skill": "content-repurpose"
+  },
+  {
+   "prompt": "Compare two impression click-through rates across different traffic mixes.",
+   "expect": "creator-analytics",
+   "case": "positive",
+   "skill": "creator-analytics"
+  },
+  {
+   "prompt": "Write a persuasive caption promising twice the engagement.",
+   "expect": "social-captions",
+   "case": "boundary",
+   "skill": "creator-analytics"
+  },
+  {
+   "prompt": "Make podcast show notes and chapters from these final-master timestamps.",
+   "expect": "podcast-notes",
+   "case": "positive",
+   "skill": "podcast-notes"
+  },
+  {
+   "prompt": "Write questions for an interview that hasn't been recorded yet.",
+   "expect": "interview-guide",
+   "case": "boundary",
+   "skill": "podcast-notes"
+  },
+  {
+   "prompt": "Draft a pinned correction and two replies about the changed date.",
+   "expect": "community-replies",
+   "case": "positive",
+   "skill": "community-replies"
+  },
+  {
+   "prompt": "Hide all the critical comments on my account.",
+   "expect": null,
+   "case": "boundary",
+   "skill": "community-replies"
+  },
+  {
+   "prompt": "Give me two usable clips from this timecoded interview, with the qualifiers intact.",
+   "expect": "clip-selects",
+   "case": "positive",
+   "skill": "clip-selects"
+  },
+  {
+   "prompt": "Write a new voiceover for a video we have not filmed.",
+   "expect": "scriptcraft",
+   "case": "boundary",
+   "skill": "clip-selects"
+  },
+  {
+   "prompt": "Adapt these post slides into Mandarin but keep the English button label shown in the clip.",
+   "expect": "content-localization",
+   "case": "positive",
+   "skill": "content-localization"
+  },
+  {
+   "prompt": "Extract word-level timestamps from my audio.",
+   "expect": null,
+   "case": "boundary",
+   "skill": "content-localization"
+  },
+  {
+   "prompt": "Check the sponsor's 'every export takes ten seconds' line against my single timed recording.",
+   "expect": "creator-fact-check",
+   "case": "positive",
+   "skill": "creator-fact-check"
+  },
+  {
+   "prompt": "Give me an image prompt for the cover without making product claims.",
+   "expect": "visual-prompt-pack",
+   "case": "boundary",
+   "skill": "creator-fact-check"
+  },
+  {
+   "prompt": "Use these 40 YouTube comments from the last month to find three reader needs. Show which comments support each, a counterexample, and one piece we can make next.",
+   "expect": "audience-listening",
+   "case": "positive",
+   "skill": "audience-listening"
+  },
+  {
+   "prompt": "Reply individually to two customer comments.",
+   "expect": "community-replies",
+   "case": "boundary",
+   "skill": "audience-listening"
+  },
+  {
+   "prompt": "Build a one-page media kit for outdoor gear brands using my last six videos, their view counts and dates. Lead with why my work fits.",
+   "expect": "creator-media-kit",
+   "case": "positive",
+   "skill": "creator-media-kit"
+  },
+  {
+   "prompt": "Calculate retention or performance from raw post analytics.",
+   "expect": "creator-analytics",
+   "case": "boundary",
+   "skill": "creator-media-kit"
+  },
+  {
+   "prompt": "Make a one-page UGC brief from these campaign notes. Separate mandatory copy from choices I can make, and list the shots each claim needs.",
+   "expect": "campaign-brief",
+   "case": "positive",
+   "skill": "campaign-brief"
+  },
+  {
+   "prompt": "Independently verify a single product claim using supplied evidence.",
+   "expect": "creator-fact-check",
+   "case": "boundary",
+   "skill": "campaign-brief"
+  },
+  {
+   "prompt": "Write an article for someone searching 'how to fix a wobbly table leg', using my two repair photos and notes. Answer early.",
+   "expect": "search-article",
+   "case": "positive",
+   "skill": "search-article"
+  },
+  {
+   "prompt": "Refresh only the two stale lines in an existing post.",
+   "expect": "content-refresh",
+   "case": "boundary",
+   "skill": "search-article"
+  },
+  {
+   "prompt": "Refresh my 2025 guide using this release note. Give me paste-ready replacements for every affected line and a short change note.",
+   "expect": "content-refresh",
+   "case": "positive",
+   "skill": "content-refresh"
+  },
+  {
+   "prompt": "Write a new article from a blank brief.",
+   "expect": "search-article",
+   "case": "boundary",
+   "skill": "content-refresh"
+  },
+  {
+   "prompt": "Make a four-frame Story about our repair week, with one optional poll and the answer in the last frame.",
+   "expect": "vertical-stories",
+   "case": "positive",
+   "skill": "vertical-stories"
+  },
+  {
+   "prompt": "Give me a feed carousel with a reusable prompt for every slide.",
+   "expect": "carouselcraft",
+   "case": "boundary",
+   "skill": "vertical-stories"
+  },
+  {
+   "prompt": "Turn this test note into five text posts for Threads. Lead with the result and keep the sample limits near it.",
+   "expect": "social-thread",
+   "case": "positive",
+   "skill": "social-thread"
+  },
+  {
+   "prompt": "Draft three independent captions for the same photo.",
+   "expect": "social-captions",
+   "case": "boundary",
+   "skill": "social-thread"
+  },
+  {
+   "prompt": "Make six standalone image prompts for my 'kitchen fixes' series. Keep the palette and 4:5 ratio fixed and leave the top third free for text.",
+   "expect": "visual-prompt-pack",
+   "case": "positive",
+   "skill": "visual-prompt-pack"
+  },
+  {
+   "prompt": "Write spoken dialogue for a product video.",
+   "expect": "scriptcraft",
+   "case": "boundary",
+   "skill": "visual-prompt-pack"
+  },
+  {
+   "prompt": "Storyboard the mug-glazing scene into six panels. Track the prop state and screen direction.",
+   "expect": "storyboard-sequence",
+   "case": "positive",
+   "skill": "storyboard-sequence"
+  },
+  {
+   "prompt": "Group shots by lighting setup for a shooting day.",
+   "expect": "shoot-plan",
+   "case": "boundary",
+   "skill": "storyboard-sequence"
+  },
+  {
+   "prompt": "Build a 45-minute live rundown for our app demo. Two hosts, a guest who may be late, and a hard stop at 9pm.",
+   "expect": "live-rundown",
+   "case": "positive",
+   "skill": "live-rundown"
+  },
+  {
+   "prompt": "Build a month-long calendar of posts.",
+   "expect": "content-planner",
+   "case": "boundary",
+   "skill": "live-rundown"
+  },
+  {
+   "prompt": "From this final video and its sound log, describe only what a blind listener needs, keeping the dialogue clear.",
+   "expect": "audio-description",
+   "case": "positive",
+   "skill": "audio-description"
+  },
+  {
+   "prompt": "Make an SRT of the dialogue and music cues.",
+   "expect": "subtitle-editor",
+   "case": "boundary",
+   "skill": "audio-description"
+  },
+  {
+   "prompt": "Turn these five asset records into a credits ledger and an end-credit block. Show any missing licence separately.",
+   "expect": "asset-credits",
+   "case": "positive",
+   "skill": "asset-credits"
+  },
+  {
+   "prompt": "Write a short alt description of the image.",
+   "expect": "image-descriptions",
+   "case": "boundary",
+   "skill": "asset-credits"
+  },
+  {
+   "prompt": "Build UTM links to our signup page for the newsletter, bio and two partner posts, keeping the page anchor.",
+   "expect": "campaign-links",
+   "case": "positive",
+   "skill": "campaign-links"
+  },
+  {
+   "prompt": "Compare the resulting CTRs after the campaign.",
+   "expect": "creator-analytics",
+   "case": "boundary",
+   "skill": "campaign-links"
+  },
+  {
+   "prompt": "Turn these two versions of a sponsor brief into a five-slide before-and-after carousel for video editors.",
+   "expect": "carouselcraft",
+   "case": "positive",
+   "skill": "carouselcraft"
+  },
+  {
+   "prompt": "Make a three-frame Instagram Story with a poll sticker.",
+   "expect": "vertical-stories",
+   "case": "boundary",
+   "skill": "carouselcraft"
+  },
+  {
+   "prompt": "Tidy this rough take into a 30-second voiceover. Keep my opening line and leave room for the before-and-after pause.",
+   "expect": "scriptcraft",
+   "case": "positive",
+   "skill": "scriptcraft"
+  },
+  {
+   "prompt": "Pick two short clips from this timecoded interview.",
+   "expect": "clip-selects",
+   "case": "boundary",
+   "skill": "scriptcraft"
+  },
+  {
+   "prompt": "Caption this Reel so deaf viewers can follow what's said.",
+   "expect": "subtitle-editor",
+   "case": "hard",
+   "skill": "subtitle-editor",
+   "trap": "social-captions"
+  },
+  {
+   "prompt": "Describe what happens on screen, between the lines of dialogue, for viewers who can't see it.",
+   "expect": "audio-description",
+   "case": "hard",
+   "skill": "audio-description",
+   "trap": "image-descriptions"
+  },
+  {
+   "prompt": "Write what a screen reader should say for this bar chart of monthly bookings.",
+   "expect": "image-descriptions",
+   "case": "hard",
+   "skill": "image-descriptions",
+   "trap": "audio-description"
+  },
+  {
+   "prompt": "Translate these subtitles into Malay and keep every timing as it is.",
+   "expect": "subtitle-editor",
+   "case": "hard",
+   "skill": "subtitle-editor",
+   "trap": "content-localization"
+  },
+  {
+   "prompt": "Turn my 40-minute livestream recording into three Shorts that don't twist what I said.",
+   "expect": "clip-selects",
+   "case": "hard",
+   "skill": "clip-selects",
+   "trap": "content-repurpose"
+  },
+  {
+   "prompt": "Turn my podcast episode into a LinkedIn post and a newsletter blurb.",
+   "expect": "content-repurpose",
+   "case": "hard",
+   "skill": "content-repurpose",
+   "trap": "podcast-notes"
+  },
+  {
+   "prompt": "My test log says the battery lasted 9 hours. Can my script say it lasts all day?",
+   "expect": "creator-fact-check",
+   "case": "hard",
+   "skill": "creator-fact-check",
+   "trap": "scriptcraft"
+  },
+  {
+   "prompt": "Which of my last ten Reels should I make more of, given these views, saves and watch times?",
+   "expect": "creator-analytics",
+   "case": "hard",
+   "skill": "creator-analytics",
+   "trap": "content-planner"
+  },
+  {
+   "prompt": "Make a one-pager I can send to brands with my audience numbers and past partners.",
+   "expect": "creator-media-kit",
+   "case": "hard",
+   "skill": "creator-media-kit",
+   "trap": "campaign-brief"
+  },
+  {
+   "prompt": "Write the words for each slide of a seven-slide LinkedIn swipe post on pricing mistakes.",
+   "expect": "carouselcraft",
+   "case": "hard",
+   "skill": "carouselcraft",
+   "trap": "social-captions"
+  },
+  {
+   "prompt": "Tidy what I say in the first three seconds of my TikTok so people keep watching.",
+   "expect": "scriptcraft",
+   "case": "hard",
+   "skill": "scriptcraft",
+   "trap": "title-thumbnail"
+  },
+  {
+   "prompt": "We film tomorrow from 4pm. Order the shots so we don't lose the light.",
+   "expect": "shoot-plan",
+   "case": "hard",
+   "skill": "shoot-plan",
+   "trap": "storyboard-sequence"
+  },
+  {
+   "prompt": "Give me a run of show for Thursday's webinar.",
+   "expect": "live-rundown",
+   "case": "hard",
+   "skill": "live-rundown",
+   "trap": "content-planner"
+  },
+  {
+   "prompt": "List the music and photos I used in this video so I can credit them properly.",
+   "expect": "asset-credits",
+   "case": "hard",
+   "skill": "asset-credits",
+   "trap": "image-descriptions"
+  },
+  {
+   "prompt": "What should I call this YouTube video?",
+   "expect": "title-thumbnail",
+   "case": "hard",
+   "skill": "title-thumbnail",
+   "trap": "search-article"
+  },
+  {
+   "prompt": "Post this caption to my Instagram now.",
+   "expect": null,
+   "case": "hard",
+   "skill": "social-captions",
+   "trap": "social-captions"
+  },
+  {
+   "prompt": "Someone commented that I lied about the price. Help me answer them.",
+   "expect": "community-replies",
+   "case": "hard",
+   "skill": "community-replies",
+   "trap": "creator-fact-check"
+  },
+  {
+   "prompt": "My 2024 'best budget mics' post lists two mics that are discontinued. Fix it.",
+   "expect": "content-refresh",
+   "case": "hard",
+   "skill": "content-refresh",
+   "trap": "search-article"
+  },
+  {
+   "prompt": "Sketch the 15-second ad shot by shot before we film.",
+   "expect": "storyboard-sequence",
+   "case": "hard",
+   "skill": "storyboard-sequence",
+   "trap": "shoot-plan"
+  },
+  {
+   "prompt": "I want to know which of my two bio links gets more clicks. Tag them.",
+   "expect": "campaign-links",
+   "case": "hard",
+   "skill": "campaign-links",
+   "trap": "creator-analytics"
+  },
+  {
+   "prompt": "Make a five-card before-and-after post from these two briefs, with a visual prompt for each card.",
+   "expect": "carouselcraft",
+   "case": "positive",
+   "skill": "carouselcraft"
+  },
+  {
+   "prompt": "Give me four types of carousels with a writing prompt for each. No finished post yet.",
+   "expect": "carouselcraft",
+   "case": "positive",
+   "skill": "carouselcraft"
+  },
+  {
+   "prompt": "Make a 40-second Reel tutorial from this recorded AI demo.",
+   "expect": "scriptcraft",
+   "case": "positive",
+   "skill": "scriptcraft"
+  },
+  {
+   "prompt": "Review this tutorial script for fabricated UI labels.",
+   "expect": "scriptcraft",
+   "case": "positive",
+   "skill": "scriptcraft"
+  },
+  {
+   "prompt": "Learn my speaking style from these approved scripts.",
+   "expect": "scriptcraft",
+   "case": "positive",
+   "skill": "scriptcraft"
+  },
+  {
+   "prompt": "Fix the previous/next arrows in my React image carousel.",
+   "expect": null,
+   "case": "hard",
+   "skill": "carouselcraft",
+   "trap": "carouselcraft"
+  },
+  {
+   "prompt": "Fix my failing Python unit test.",
+   "expect": null,
+   "case": "hard",
+   "skill": "scriptcraft",
+   "trap": "scriptcraft"
+  },
+  {
+   "prompt": "Polish this job application paragraph.",
+   "expect": null,
+   "case": "hard",
+   "skill": "social-captions",
+   "trap": "social-captions"
+  },
+  {
+   "prompt": "Give me a playlist for a road trip.",
+   "expect": null,
+   "case": "hard",
+   "skill": "content-planner",
+   "trap": "content-planner"
+  },
+  {
+   "prompt": "How do I grow into this creator with 40,000 followers in 12 months? I have 3,500 and post twice a week; they post four times.",
+   "expect": "creator-benchmark",
+   "case": "positive",
+   "skill": "creator-benchmark"
+  },
+  {
+   "prompt": "Review last month's results for my own channel.",
+   "expect": "creator-analytics",
+   "case": "boundary",
+   "skill": "creator-benchmark"
+  },
+  {
+   "prompt": "Give me five stronger openings for this 40-second Short about fixing a cracked mug.",
+   "expect": "hook-lab",
+   "case": "positive",
+   "skill": "hook-lab"
+  },
+  {
+   "prompt": "Write the full script for this Short about fixing a cracked mug.",
+   "expect": "scriptcraft",
+   "case": "boundary",
+   "skill": "hook-lab"
+  },
+  {
+   "prompt": "Write a DM pitching a joint video to this ceramics creator with 15,000 followers.",
+   "expect": "collab-pitch",
+   "case": "positive",
+   "skill": "collab-pitch"
+  },
+  {
+   "prompt": "Write a pitch sheet for a stationery brand.",
+   "expect": "creator-media-kit",
+   "case": "boundary",
+   "skill": "collab-pitch"
+  },
+  {
+   "prompt": "What should I charge a brand for one Short and two Stories? My Shorts get about 8,000 views and take 6 hours.",
+   "expect": "rate-card",
+   "case": "positive",
+   "skill": "rate-card"
+  },
+  {
+   "prompt": "Build a one-page media kit for brands.",
+   "expect": "creator-media-kit",
+   "case": "boundary",
+   "skill": "rate-card"
+  }
+ ]
+}
